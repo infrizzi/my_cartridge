@@ -57,7 +57,6 @@ if __name__ == "__main__":
             GenerationEvalConfig(
                 dataset=GenerateEvalDataset.Config(
                     data_source=DataSource(path=EVAL_PATH, type="local"),
-                    max_samples=10, 
                 ),
                 num_samples=1,
                 temperature=0.3, # Risposte più deterministiche

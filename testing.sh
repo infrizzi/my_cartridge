@@ -32,10 +32,9 @@ MONITOR_PID=$!
 
 echo "Avvio del server Tokasaurus..."
 tksrs model=Qwen/Qwen3-4b kv_cache_num_tokens='(32 * 1024)' port=10210 &
-SERVER_PID=$!
 
 echo "Verifica disponibilità server sulla porta 10210..."
-until curl -s http://127.0.0.1:10210/v1/cartridge/chat/completions > /dev/null; do
+until curl -s http://127.0.0.1:10210/v1/chat/completions > /dev/null; do
   echo "Il server non risponde ancora... attendo 15 secondi"
   sleep 15
 done
@@ -46,5 +45,5 @@ python testing.py
 
 # Pulizia: uccidiamo il server alla fine del test
 echo "Test concluso. Arresto del server (PID: $SERVER_PID)..."
-kill $SERVER_PID
+kill %1
 kill $MONITOR_PID

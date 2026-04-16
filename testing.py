@@ -3,8 +3,8 @@ import json
 import time
 from datetime import timedelta
 
-# URL del server Tokasaurus (porta standard 10210)
-URL = "http://127.0.0.1:10210/v1/cartridge/chat/completions"
+# URL del server Tokasaurus
+URL = "http://127.0.0.1:10210/v1/chat/completions"
 
 # Percorso assoluto del tuo miglior checkpoint
 CARTRIDGE_PATH = "/work/tesi_lpaladino/outputs/checkpoints/2026-04-16-14-32-16-run_train/4551b584-fe03-4a73-81ff-89204d6ce629/cache-step32.pt"
@@ -26,10 +26,11 @@ def ask_cartridge(prompt):
     try:
         response = requests.post(URL, json=payload)
         response.raise_for_status()
-        end_req = time.time()
-        return response.json()['choices'][0]['message']['content'], end_req - start_req
+        content = response.json()['choices'][0]['message']['content']
+        duration = time.time() - start_req
+        return content, duration
     except Exception as e:
-        return f"Errore durante la richiesta: {e}"
+        return f"Errore durante la richiesta: {e}", 0
 
 if __name__ == "__main__":
     test_prompts = [

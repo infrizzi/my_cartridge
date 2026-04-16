@@ -44,6 +44,6 @@ echo "Server pronto! Eseguo testing"
 python testing.py
 
 # Pulizia: uccidiamo il server alla fine del test
-echo "Test concluso. Arresto del server (PID: $SERVER_PID)..."
+echo "Test concluso. Arresto del server..."
 kill %1
 kill $MONITOR_PID

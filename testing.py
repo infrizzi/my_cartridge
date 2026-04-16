@@ -16,15 +16,15 @@ def ask_cartridge(prompt):
         "max_tokens": 256,
         "temperature": 0.4, # Bassa per risposte più precise e meno allucinate
         "cartridges": [{
-            "id": CARTRIDGE_PATH,
-            "source": "local",
-            "force_redownload": False
+            "path": CARTRIDGE_PATH,
         }]
     }
     
     start_req = time.time()
     try:
         response = requests.post(URL, json=payload)
+        if response.status_code == 422:
+            print(f"Dettaglio errore 422: {response.text}")
         response.raise_for_status()
         content = response.json()['choices'][0]['message']['content']
         duration = time.time() - start_req

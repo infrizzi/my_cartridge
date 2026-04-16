@@ -1,0 +1,28 @@
+Unloading python/3.11.11-gcc-11.4.0
+  Unloading useless requirement: util-linux-uuid/2.41-gcc-11.4.0
+    sqlite/3.46.0-gcc-11.4.0 openssl/3.4.1-gcc-11.4.0
+    libxcrypt/4.4.38-gcc-11.4.0 libffi/3.4.8-gcc-11.4.0
+    gettext/0.23.1-gcc-11.4.0 tar/1.35-gcc-11.4.0 zstd/1.5.7-gcc-11.4.0
+    pigz/2.8-gcc-11.4.0 gdbm/1.23-gcc-11.4.0 readline/8.2-gcc-11.4.0
+    ncurses/6.5-gcc-11.4.0 expat/2.7.1-gcc-11.4.0 libbsd/0.12.2-gcc-11.4.0
+    libmd/1.1.0-gcc-11.4.0 bzip2/1.0.8-gcc-11.4.0
+Inizio della fase di Training/Distillazione...
+Utilizzo del dataset generato per Oppenheimer.
+Running 1 configs
+2026-04-16 10:48:19,553 - cartridges.train [rank=0] - INFO - Global batch size: 32
+2026-04-16 10:48:19,553 - cartridges.train [rank=0] - INFO - Num devices: 1
+2026-04-16 10:48:19,553 - cartridges.train [rank=0] - INFO - Train outputs will be saved to /work/tesi_lpaladino/outputs/checkpoints/2026-04-16-10-48-19-run_train/35e15cd2-0646-4a15-bcdb-8ecf49ff6255
+2026-04-16 10:48:23,698 - cartridges.train [rank=0] - INFO - Fininshed loading training dataset from disk, took 2.76s
+2026-04-16 10:48:23,699 - cartridges.train [rank=0] - INFO - Finished loading eval and generate datasets from disk, took 2.8s
+2026-04-16 10:48:38,791 - cartridges.train [rank=0] - INFO - Using custom prefix tuning (TrainableCache)
+2026-04-16 10:48:41,790 - cartridges.cache [rank=0] - INFO - num_trainable_tokens: 1023
+2026-04-16 10:48:41,790 - cartridges.cache [rank=0] - INFO - num_frozen_tokens: 1
+2026-04-16 10:48:41,790 - cartridges.train [rank=0] - INFO - Done loading trainable cache, time: 3.00s
+2026-04-16 10:48:41,815 - cartridges.train [rank=0] - INFO - Starting training
+2026-04-16 10:48:49,003 - cartridges.train [rank=0] - INFO - Setup wandb with model stats: {'num_model_params': 4097965568, 'num_trainable_params': 75423744, 'num_trainable_tokens': 1023, 'cache_trainable_params': 75423744}
+2026-04-16 10:48:49,137 - cartridges.train [rank=0] - INFO - Dataloader length: 398
+2026-04-16 10:52:45,793 - cartridges.train [rank=0] - INFO - Dataloader length: 398
+2026-04-16 10:54:08,171 - cartridges.train [rank=0] - INFO - Dataloader length: 398
+2026-04-16 10:55:25,373 - cartridges.train [rank=0] - INFO - Saving cache to wandb: cache-step37.pt
+2026-04-16 10:55:25,379 - cartridges.train [rank=0] - INFO - Done training waiting for final barrier.
+Job di training completato con successo.

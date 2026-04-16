@@ -1,0 +1,624 @@
+Avvio del server Tokasaurus...
+Verifica disponibilità server sulla porta 10555...
+Il server non risponde ancora... attendo 15 secondi
+Il server non risponde ancora... attendo 15 secondi
+Il server non risponde ancora... attendo 15 secondi
+Il server non risponde ancora... attendo 15 secondi
+Il server non risponde ancora... attendo 15 secondi
+Setting max_num_tokens_per_request to 40960
+Starting 3 processes: ['model_worker', 'manager', 'server']
+Running in the main process: server
+2026-04-15 16:28:53 | INFO | server | Starting web server
+Il server non risponde ancora... attendo 15 secondi
+Il server non risponde ancora... attendo 15 secondi
+2026-04-15 16:29:18 | INFO | model_worker | Model worker started!
+2026-04-15 16:29:18 | INFO | model_worker | Creating model on device cuda:0 with dtype torch.bfloat16
+2026-04-15 16:29:19 | INFO | manager | Manager started
+Building layers 0 to 36
+Loading from safetensors
+Il server non risponde ancora... attendo 15 secondi
+Il server non risponde ancora... attendo 15 secondi
+2026-04-15 16:29:41 | INFO | model_worker | Created model
+2026-04-15 16:29:41 | INFO | model_worker | Model loop started!
+Il server non risponde ancora... attendo 15 secondi
+2026-04-15 16:29:59 | INFO | manager | Starting manager loop
+System startup time: 68.03069686889648
+ _    _               _  _  _    _    _       
+| |_ | |__    ___    | |(_)| |_ | |_ | |  ___ 
+| __|| '_ \  / _ \   | || || __|| __|| | / _ \
+| |_ | | | ||  __/   | || || |_ | |_ | ||  __/
+ \__||_| |_| \___|   |_||_| \__| \__||_| \___|
+                                              
+ _      _      __  __                         _              
+| |    | |    |  \/  |     ___  _ __    __ _ (_) _ __    ___ 
+| |    | |    | |\/| |    / _ \| '_ \  / _` || || '_ \  / _ \
+| |___ | |___ | |  | |   |  __/| | | || (_| || || | | ||  __/
+|_____||_____||_|  |_|    \___||_| |_| \__, ||_||_| |_| \___|
+                                       |___/                 
+ _    _             _                           _      _ 
+| |_ | |__    __ _ | |_      ___   ___   _   _ | |  __| |
+| __|| '_ \  / _` || __|    / __| / _ \ | | | || | / _` |
+| |_ | | | || (_| || |_    | (__ | (_) || |_| || || (_| |
+ \__||_| |_| \__,_| \__|    \___| \___/  \__,_||_| \__,_|
+                                                         
+
+INFO:     127.0.0.1:49940 - "GET /v1/models HTTP/1.1" 200 OK
+Server pronto! Lancio la sintesi...
+--- Inizio Sintesi: Wed Apr 15 16:30:44 2026 ---
+Running 1 configs
+2026-04-15 16:30:44,834 - cartridges.synthesize [rank=0] - INFO - Generating dataset with run dir: /work/tesi_lpaladino/outputs/2026-04-15-16-30-44-synthesis/cccb0dd8-4041-4c9d-95f7-0b548d1e3f22
+2026-04-15 16:30:51,826 - cartridges.synthesize [rank=0] - INFO - Instantiating convo generator...
+INFO:     127.0.0.1:60662 - "GET /v1/models HTTP/1.1" 200 OK
+Processing batch 0
+tokens_in_chunk: 1013, start_idx: 66204, end_idx: 67217
+2026-04-15 16:30:54,987 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=0] Prompt sampling took 0.0007340908050537109 seconds
+2026-04-15 16:30:54,987 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=0] Initialization of convos took 1.5974044799804688e-05 seconds
+2026-04-15 16:30:54,988 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=0] Sending batch chat request
+Processing batch 1
+tokens_in_chunk: 911, start_idx: 58160, end_idx: 59071
+2026-04-15 16:30:54,991 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=1] Prompt sampling took 0.0005929470062255859 seconds
+2026-04-15 16:30:54,991 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=1] Initialization of convos took 1.7881393432617188e-05 seconds
+2026-04-15 16:30:54,991 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=1] Sending batch chat request
+Processing batch 2
+tokens_in_chunk: 876, start_idx: 19599, end_idx: 20475
+2026-04-15 16:30:54,993 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=2] Prompt sampling took 0.0004780292510986328 seconds
+2026-04-15 16:30:54,993 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=2] Initialization of convos took 1.9073486328125e-05 seconds
+2026-04-15 16:30:54,993 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=2] Sending batch chat request
+Processing batch 3
+tokens_in_chunk: 747, start_idx: 116682, end_idx: 117429
+2026-04-15 16:30:54,995 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=3] Prompt sampling took 0.0004210472106933594 seconds
+2026-04-15 16:30:54,995 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=3] Initialization of convos took 1.8596649169921875e-05 seconds
+2026-04-15 16:30:54,995 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=3] Sending batch chat request
+2026-04-15 16:30:55 | INFO | manager | Throughput: 19.99 tok/s (19.99 prefill, 0.00 decode), 1109.00 tok/fwd (0.00 decode, 1109.00 prefill), 0.02 fwd/s, 0.00 seqs/s, 0.00 reqs/s | Seqs (#): 99 running (99 decoding, 0 prefilling, avg seq len 1037.72), 0 queued | KV Cache Usage: 6.14% allocated, 38.64% reserved, (44.78% total) | Per Manager Loop: Idle 99.91%, 0.99 ± 0.10 commands, 0.09 ± 0.81 steps scheduled (max 8) | Early Stopping: 0.00 ± 0.00 (buffer size 0, warmup_done=False) | Reporting Interval: 55.49s, 1 forward passes, 0 finished seqs, 0 finished reqs | Lifetime Counters: 1 forward passes, 1.11K prefill tokens, 0 decode tokens, 0 finished seqs, 0 finished reqs
+INFO:     127.0.0.1:60714 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:30:58,867 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=3] Responses received
+2026-04-15 16:30:58,868 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=3] Batch chat completed in 3.87 seconds
+2026-04-15 16:30:58,868 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=3] Round 0: Bot A response generation took 3.8730528354644775 seconds
+2026-04-15 16:30:58,869 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=3] Sending batch chat request
+INFO:     127.0.0.1:60702 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:30:59,402 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=2] Responses received
+2026-04-15 16:30:59,404 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=2] Batch chat completed in 4.41 seconds
+2026-04-15 16:30:59,404 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=2] Round 0: Bot A response generation took 4.411147356033325 seconds
+2026-04-15 16:30:59,405 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=2] Sending batch chat request
+INFO:     127.0.0.1:60688 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:30:59,688 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=1] Responses received
+2026-04-15 16:30:59,690 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=1] Batch chat completed in 4.70 seconds
+2026-04-15 16:30:59,691 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=1] Round 0: Bot A response generation took 4.6999192237854 seconds
+2026-04-15 16:30:59,691 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=1] Sending batch chat request
+2026-04-15 16:31:00 | INFO | manager | Throughput: 4687.33 tok/s (2442.88 prefill, 2244.45 decode), 125.94 tok/fwd (60.30 decode, 65.64 prefill), 37.22 fwd/s, 25.28 seqs/s, 25.28 reqs/s | Seqs (#): 97 running (97 decoding, 0 prefilling, avg seq len 977.71), 0 queued | KV Cache Usage: 9.88% allocated, 72.84% reserved, (82.71% total) | Per Manager Loop: Idle 71.80%, 0.49 ± 1.44 commands, 0.73 ± 0.52 steps scheduled (max 3) | Early Stopping: 0.14 ± 0.07 (buffer size 127, warmup_done=False) | Reporting Interval: 5.02s, 187 forward passes, 127 finished seqs, 127 finished reqs | Lifetime Counters: 188 forward passes, 13.38K prefill tokens, 11.28K decode tokens, 127 finished seqs, 127 finished reqs
+INFO:     127.0.0.1:60678 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:31:02,890 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=0] Responses received
+2026-04-15 16:31:02,893 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=0] Batch chat completed in 7.90 seconds
+2026-04-15 16:31:02,894 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=0] Round 0: Bot A response generation took 7.9057793617248535 seconds
+2026-04-15 16:31:02,894 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=0] Sending batch chat request
+2026-04-15 16:31:05 | INFO | manager | Throughput: 3904.53 tok/s (442.03 prefill, 3462.51 decode), 98.23 tok/fwd (87.11 decode, 11.12 prefill), 39.75 fwd/s, 7.59 seqs/s, 7.59 reqs/s | Seqs (#): 91 running (91 decoding, 0 prefilling, avg seq len 1190.97), 0 queued | KV Cache Usage: 20.51% allocated, 5.62% reserved, (26.12% total) | Per Manager Loop: Idle 66.26%, 0.15 ± 0.54 commands, 0.91 ± 0.32 steps scheduled (max 2) | Early Stopping: 0.13 ± 0.08 (buffer size 165, warmup_done=True) | Reporting Interval: 5.01s, 199 forward passes, 38 finished seqs, 38 finished reqs | Lifetime Counters: 387 forward passes, 15.6K prefill tokens, 28.61K decode tokens, 165 finished seqs, 165 finished reqs
+2026-04-15 16:31:10 | INFO | manager | Throughput: 3008.56 tok/s (0.00 prefill, 3008.56 decode), 80.35 tok/fwd (80.35 decode, 0.00 prefill), 37.45 fwd/s, 4.78 seqs/s, 4.78 reqs/s | Seqs (#): 67 running (67 decoding, 0 prefilling, avg seq len 1372.36), 0 queued | KV Cache Usage: 26.01% allocated, 6.97% reserved, (32.98% total) | Per Manager Loop: Idle 69.54%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.14 ± 0.08 (buffer size 189, warmup_done=True) | Reporting Interval: 5.02s, 188 forward passes, 24 finished seqs, 24 finished reqs | Lifetime Counters: 575 forward passes, 15.6K prefill tokens, 43.72K decode tokens, 189 finished seqs, 189 finished reqs
+2026-04-15 16:31:15 | INFO | manager | Throughput: 2242.48 tok/s (0.00 prefill, 2242.48 decode), 58.60 tok/fwd (58.60 decode, 0.00 prefill), 38.26 fwd/s, 2.79 seqs/s, 2.79 reqs/s | Seqs (#): 53 running (53 decoding, 0 prefilling, avg seq len 1555.19), 0 queued | KV Cache Usage: 28.20% allocated, 12.57% reserved, (40.77% total) | Per Manager Loop: Idle 71.55%, 0.00 ± 0.00 commands, 1.01 ± 0.07 steps scheduled (max 2) | Early Stopping: 0.17 ± 0.12 (buffer size 203, warmup_done=True) | Reporting Interval: 5.02s, 192 forward passes, 14 finished seqs, 14 finished reqs | Lifetime Counters: 767 forward passes, 15.6K prefill tokens, 54.97K decode tokens, 203 finished seqs, 203 finished reqs
+2026-04-15 16:31:20 | INFO | manager | Throughput: 1830.85 tok/s (0.00 prefill, 1830.85 decode), 49.13 tok/fwd (49.13 decode, 0.00 prefill), 37.27 fwd/s, 2.19 seqs/s, 2.19 reqs/s | Seqs (#): 42 running (42 decoding, 0 prefilling, avg seq len 1755.64), 0 queued | KV Cache Usage: 28.67% allocated, 2.66% reserved, (31.34% total) | Per Manager Loop: Idle 71.97%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.19 ± 0.16 (buffer size 214, warmup_done=True) | Reporting Interval: 5.02s, 187 forward passes, 11 finished seqs, 11 finished reqs | Lifetime Counters: 954 forward passes, 15.6K prefill tokens, 64.16K decode tokens, 214 finished seqs, 214 finished reqs
+2026-04-15 16:31:25 | INFO | manager | Throughput: 1420.76 tok/s (0.00 prefill, 1420.76 decode), 36.69 tok/fwd (36.69 decode, 0.00 prefill), 38.72 fwd/s, 3.39 seqs/s, 3.39 reqs/s | Seqs (#): 25 running (25 decoding, 0 prefilling, avg seq len 1939.32), 0 queued | KV Cache Usage: 21.79% allocated, 1.01% reserved, (22.80% total) | Per Manager Loop: Idle 69.12%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.24 ± 0.24 (buffer size 231, warmup_done=True) | Reporting Interval: 5.01s, 194 forward passes, 17 finished seqs, 17 finished reqs | Lifetime Counters: 1.15K forward passes, 15.6K prefill tokens, 71.27K decode tokens, 231 finished seqs, 231 finished reqs
+INFO:     127.0.0.1:42864 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:31:26,132 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=3] Responses received
+2026-04-15 16:31:26,174 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=3] Batch chat completed in 27.31 seconds
+2026-04-15 16:31:26,175 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=3] Round 0: Bot B response generation took 27.30670475959778 seconds
+2026-04-15 16:31:26,243 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=3] Conversion to training examples took 0.06736493110656738 seconds
+2026-04-15 16:31:26,244 - cartridges.synthesize [rank=0] - INFO - Batch 3 completed
+Processing batch 4
+tokens_in_chunk: 964, start_idx: 7768, end_idx: 8732
+2026-04-15 16:31:26,246 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=4] Prompt sampling took 0.0013761520385742188 seconds
+2026-04-15 16:31:26,247 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=4] Initialization of convos took 2.6226043701171875e-05 seconds
+2026-04-15 16:31:26,247 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=4] Sending batch chat request
+INFO:     127.0.0.1:42874 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:31:26,587 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=2] Responses received
+2026-04-15 16:31:26,624 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=2] Batch chat completed in 27.22 seconds
+2026-04-15 16:31:26,625 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=2] Round 0: Bot B response generation took 27.219972610473633 seconds
+2026-04-15 16:31:26,636 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=2] Conversion to training examples took 0.010957956314086914 seconds
+2026-04-15 16:31:26,637 - cartridges.synthesize [rank=0] - INFO - Batch 2 completed
+Processing batch 5
+tokens_in_chunk: 533, start_idx: 44177, end_idx: 44710
+2026-04-15 16:31:26,638 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=5] Prompt sampling took 0.0010042190551757812 seconds
+2026-04-15 16:31:26,639 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=5] Initialization of convos took 2.1696090698242188e-05 seconds
+2026-04-15 16:31:26,639 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=5] Sending batch chat request
+INFO:     127.0.0.1:42884 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:31:26,832 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=1] Responses received
+2026-04-15 16:31:26,875 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=1] Batch chat completed in 27.18 seconds
+2026-04-15 16:31:26,876 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=1] Round 0: Bot B response generation took 27.18465828895569 seconds
+2026-04-15 16:31:26,887 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=1] Conversion to training examples took 0.01044154167175293 seconds
+2026-04-15 16:31:26,888 - cartridges.synthesize [rank=0] - INFO - Batch 1 completed
+Processing batch 6
+tokens_in_chunk: 974, start_idx: 34310, end_idx: 35284
+2026-04-15 16:31:26,889 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=6] Prompt sampling took 0.0011725425720214844 seconds
+2026-04-15 16:31:26,890 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=6] Initialization of convos took 1.9550323486328125e-05 seconds
+2026-04-15 16:31:26,890 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=6] Sending batch chat request
+INFO:     127.0.0.1:55010 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:31:29,724 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=4] Responses received
+2026-04-15 16:31:29,725 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=4] Batch chat completed in 3.48 seconds
+2026-04-15 16:31:29,726 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=4] Round 0: Bot A response generation took 3.4789822101593018 seconds
+2026-04-15 16:31:29,726 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=4] Sending batch chat request
+INFO:     127.0.0.1:42890 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:31:30,027 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=0] Responses received
+2026-04-15 16:31:30,042 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=0] Batch chat completed in 27.15 seconds
+2026-04-15 16:31:30,042 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=0] Round 0: Bot B response generation took 27.148215532302856 seconds
+2026-04-15 16:31:30,047 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=0] Conversion to training examples took 0.004782676696777344 seconds
+2026-04-15 16:31:30,048 - cartridges.synthesize [rank=0] - INFO - Batch 0 completed
+Processing batch 7
+tokens_in_chunk: 978, start_idx: 78170, end_idx: 79148
+2026-04-15 16:31:30,048 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=7] Prompt sampling took 0.0006082057952880859 seconds
+2026-04-15 16:31:30,049 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=7] Initialization of convos took 1.0967254638671875e-05 seconds
+2026-04-15 16:31:30,049 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=7] Sending batch chat request
+2026-04-15 16:31:30 | INFO | manager | Throughput: 3703.30 tok/s (1883.50 prefill, 1819.80 decode), 90.46 tok/fwd (44.45 decode, 46.01 prefill), 40.94 fwd/s, 23.36 seqs/s, 23.36 reqs/s | Seqs (#): 68 running (68 decoding, 0 prefilling, avg seq len 1083.82), 0 queued | KV Cache Usage: 6.49% allocated, 12.45% reserved, (18.95% total) | Per Manager Loop: Idle 65.20%, 0.53 ± 1.19 commands, 0.68 ± 0.49 steps scheduled (max 2) | Early Stopping: 0.26 ± 0.29 (buffer size 348, warmup_done=True) | Reporting Interval: 5.01s, 205 forward passes, 117 finished seqs, 117 finished reqs | Lifetime Counters: 1.35K forward passes, 25.03K prefill tokens, 80.39K decode tokens, 348 finished seqs, 348 finished reqs
+INFO:     127.0.0.1:55034 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:31:31,070 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=6] Responses received
+2026-04-15 16:31:31,072 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=6] Batch chat completed in 4.18 seconds
+2026-04-15 16:31:31,072 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=6] Round 0: Bot A response generation took 4.182551383972168 seconds
+2026-04-15 16:31:31,073 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=6] Sending batch chat request
+INFO:     127.0.0.1:55018 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:31:32,135 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=5] Responses received
+2026-04-15 16:31:32,137 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=5] Batch chat completed in 5.50 seconds
+2026-04-15 16:31:32,137 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=5] Round 0: Bot A response generation took 5.498206615447998 seconds
+2026-04-15 16:31:32,138 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=5] Sending batch chat request
+2026-04-15 16:31:35 | INFO | manager | Throughput: 3795.27 tok/s (760.21 prefill, 3035.06 decode), 88.63 tok/fwd (70.88 decode, 17.75 prefill), 42.82 fwd/s, 14.94 seqs/s, 14.94 reqs/s | Seqs (#): 57 running (57 decoding, 0 prefilling, avg seq len 1098.79), 0 queued | KV Cache Usage: 13.53% allocated, 19.17% reserved, (32.69% total) | Per Manager Loop: Idle 66.92%, 0.24 ± 0.62 commands, 0.81 ± 0.39 steps scheduled (max 1) | Early Stopping: 0.24 ± 0.27 (buffer size 423, warmup_done=True) | Reporting Interval: 5.02s, 215 forward passes, 75 finished seqs, 75 finished reqs | Lifetime Counters: 1.57K forward passes, 28.84K prefill tokens, 95.63K decode tokens, 423 finished seqs, 423 finished reqs
+INFO:     127.0.0.1:57598 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:31:35,655 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=7] Responses received
+2026-04-15 16:31:35,657 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=7] Batch chat completed in 5.61 seconds
+2026-04-15 16:31:35,657 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=7] Round 0: Bot A response generation took 5.608691930770874 seconds
+2026-04-15 16:31:35,658 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=7] Sending batch chat request
+2026-04-15 16:31:40 | INFO | manager | Throughput: 3315.39 tok/s (371.23 prefill, 2944.15 decode), 83.14 tok/fwd (73.83 decode, 9.31 prefill), 39.87 fwd/s, 4.39 seqs/s, 4.39 reqs/s | Seqs (#): 67 running (67 decoding, 0 prefilling, avg seq len 1302.48), 0 queued | KV Cache Usage: 22.57% allocated, 23.61% reserved, (46.18% total) | Per Manager Loop: Idle 67.65%, 0.14 ± 0.43 commands, 0.88 ± 0.33 steps scheduled (max 1) | Early Stopping: 0.24 ± 0.26 (buffer size 445, warmup_done=True) | Reporting Interval: 5.02s, 200 forward passes, 22 finished seqs, 22 finished reqs | Lifetime Counters: 1.77K forward passes, 30.71K prefill tokens, 110.39K decode tokens, 445 finished seqs, 445 finished reqs
+2026-04-15 16:31:45 | INFO | manager | Throughput: 2337.30 tok/s (0.00 prefill, 2337.30 decode), 59.69 tok/fwd (59.69 decode, 0.00 prefill), 39.16 fwd/s, 2.20 seqs/s, 2.20 reqs/s | Seqs (#): 56 running (56 decoding, 0 prefilling, avg seq len 1503.61), 0 queued | KV Cache Usage: 28.67% allocated, 16.70% reserved, (45.37% total) | Per Manager Loop: Idle 68.14%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.24 ± 0.26 (buffer size 456, warmup_done=True) | Reporting Interval: 5.01s, 196 forward passes, 11 finished seqs, 11 finished reqs | Lifetime Counters: 1.96K forward passes, 30.71K prefill tokens, 122.09K decode tokens, 456 finished seqs, 456 finished reqs
+2026-04-15 16:31:50 | INFO | manager | Throughput: 1925.11 tok/s (0.00 prefill, 1925.11 decode), 51.56 tok/fwd (51.56 decode, 0.00 prefill), 37.34 fwd/s, 1.79 seqs/s, 1.79 reqs/s | Seqs (#): 47 running (47 decoding, 0 prefilling, avg seq len 1709.87), 0 queued | KV Cache Usage: 31.34% allocated, 8.72% reserved, (40.05% total) | Per Manager Loop: Idle 67.42%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.24 ± 0.26 (buffer size 465, warmup_done=True) | Reporting Interval: 5.04s, 188 forward passes, 9 finished seqs, 9 finished reqs | Lifetime Counters: 2.15K forward passes, 30.71K prefill tokens, 131.78K decode tokens, 465 finished seqs, 465 finished reqs
+2026-04-15 16:31:55 | INFO | manager | Throughput: 1528.13 tok/s (0.00 prefill, 1528.13 decode), 39.94 tok/fwd (39.94 decode, 0.00 prefill), 38.26 fwd/s, 3.59 seqs/s, 3.59 reqs/s | Seqs (#): 29 running (29 decoding, 0 prefilling, avg seq len 1930.62), 0 queued | KV Cache Usage: 24.55% allocated, 2.06% reserved, (26.61% total) | Per Manager Loop: Idle 68.04%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.27 ± 0.28 (buffer size 483, warmup_done=True) | Reporting Interval: 5.02s, 192 forward passes, 18 finished seqs, 18 finished reqs | Lifetime Counters: 2.34K forward passes, 30.71K prefill tokens, 139.45K decode tokens, 483 finished seqs, 483 finished reqs
+INFO:     127.0.0.1:57594 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:31:56,070 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=4] Responses received
+2026-04-15 16:31:56,090 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=4] Batch chat completed in 26.36 seconds
+2026-04-15 16:31:56,090 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=4] Round 0: Bot B response generation took 26.36388921737671 seconds
+2026-04-15 16:31:56,094 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=4] Conversion to training examples took 0.0035583972930908203 seconds
+2026-04-15 16:31:56,094 - cartridges.synthesize [rank=0] - INFO - Batch 4 completed
+Processing batch 8
+tokens_in_chunk: 837, start_idx: 104974, end_idx: 105811
+2026-04-15 16:31:56,095 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=8] Prompt sampling took 0.0005583763122558594 seconds
+2026-04-15 16:31:56,095 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=8] Initialization of convos took 9.775161743164062e-06 seconds
+2026-04-15 16:31:56,095 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=8] Sending batch chat request
+INFO:     127.0.0.1:57602 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:31:57,549 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=6] Responses received
+2026-04-15 16:31:57,589 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=6] Batch chat completed in 26.52 seconds
+2026-04-15 16:31:57,590 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=6] Round 0: Bot B response generation took 26.51701045036316 seconds
+2026-04-15 16:31:57,600 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=6] Conversion to training examples took 0.009732723236083984 seconds
+2026-04-15 16:31:57,600 - cartridges.synthesize [rank=0] - INFO - Batch 6 completed
+Processing batch 9
+tokens_in_chunk: 772, start_idx: 69858, end_idx: 70630
+2026-04-15 16:31:57,602 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=9] Prompt sampling took 0.0008592605590820312 seconds
+2026-04-15 16:31:57,602 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=9] Initialization of convos took 1.8596649169921875e-05 seconds
+2026-04-15 16:31:57,602 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=9] Sending batch chat request
+INFO:     127.0.0.1:57616 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:31:58,535 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=5] Responses received
+2026-04-15 16:31:58,548 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=5] Batch chat completed in 26.41 seconds
+2026-04-15 16:31:58,548 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=5] Round 0: Bot B response generation took 26.410764694213867 seconds
+2026-04-15 16:31:58,552 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=5] Conversion to training examples took 0.003793001174926758 seconds
+2026-04-15 16:31:58,552 - cartridges.synthesize [rank=0] - INFO - Batch 5 completed
+Processing batch 10
+tokens_in_chunk: 743, start_idx: 97971, end_idx: 98714
+2026-04-15 16:31:58,553 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=10] Prompt sampling took 0.0004825592041015625 seconds
+2026-04-15 16:31:58,553 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=10] Initialization of convos took 9.059906005859375e-06 seconds
+2026-04-15 16:31:58,553 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=10] Sending batch chat request
+INFO:     127.0.0.1:51102 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:32:00,602 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=8] Responses received
+2026-04-15 16:32:00,602 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=8] Batch chat completed in 4.51 seconds
+2026-04-15 16:32:00,603 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=8] Round 0: Bot A response generation took 4.507530450820923 seconds
+2026-04-15 16:32:00,603 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=8] Sending batch chat request
+2026-04-15 16:32:00 | INFO | manager | Throughput: 2964.58 tok/s (1225.29 prefill, 1739.28 decode), 69.84 tok/fwd (40.97 decode, 28.86 prefill), 42.45 fwd/s, 22.12 seqs/s, 22.12 reqs/s | Seqs (#): 14 running (14 decoding, 0 prefilling, avg seq len 1453.00), 0 queued | KV Cache Usage: 7.81% allocated, 1.72% reserved, (9.53% total) | Per Manager Loop: Idle 61.21%, 0.35 ± 0.91 commands, 0.79 ± 0.50 steps scheduled (max 5) | Early Stopping: 0.27 ± 0.30 (buffer size 594, warmup_done=True) | Reporting Interval: 5.02s, 213 forward passes, 111 finished seqs, 111 finished reqs | Lifetime Counters: 2.56K forward passes, 36.85K prefill tokens, 148.18K decode tokens, 594 finished seqs, 594 finished reqs
+INFO:     127.0.0.1:51116 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:32:01,357 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=9] Responses received
+2026-04-15 16:32:01,358 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=9] Batch chat completed in 3.76 seconds
+2026-04-15 16:32:01,358 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=9] Round 0: Bot A response generation took 3.7560667991638184 seconds
+2026-04-15 16:32:01,358 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=9] Sending batch chat request
+INFO:     127.0.0.1:57632 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:32:02,134 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=7] Responses received
+2026-04-15 16:32:02,150 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=7] Batch chat completed in 26.49 seconds
+2026-04-15 16:32:02,151 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=7] Round 0: Bot B response generation took 26.493295907974243 seconds
+2026-04-15 16:32:02,155 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=7] Conversion to training examples took 0.003927946090698242 seconds
+2026-04-15 16:32:02,155 - cartridges.synthesize [rank=0] - INFO - Batch 7 completed
+Processing batch 11
+tokens_in_chunk: 551, start_idx: 33030, end_idx: 33581
+2026-04-15 16:32:02,156 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=11] Prompt sampling took 0.0004360675811767578 seconds
+2026-04-15 16:32:02,156 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=11] Initialization of convos took 1.1444091796875e-05 seconds
+2026-04-15 16:32:02,156 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=11] Sending batch chat request
+INFO:     127.0.0.1:47736 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:32:02,251 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=10] Responses received
+2026-04-15 16:32:02,252 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=10] Batch chat completed in 3.70 seconds
+2026-04-15 16:32:02,252 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=10] Round 0: Bot A response generation took 3.6987361907958984 seconds
+2026-04-15 16:32:02,252 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=10] Sending batch chat request
+2026-04-15 16:32:05 | INFO | manager | Throughput: 4377.03 tok/s (1334.85 prefill, 3042.18 decode), 110.19 tok/fwd (76.58 decode, 33.60 prefill), 39.72 fwd/s, 17.37 seqs/s, 17.37 reqs/s | Seqs (#): 55 running (55 decoding, 0 prefilling, avg seq len 1034.78), 0 queued | KV Cache Usage: 11.88% allocated, 19.37% reserved, (31.25% total) | Per Manager Loop: Idle 57.30%, 0.49 ± 1.20 commands, 0.77 ± 0.57 steps scheduled (max 6) | Early Stopping: 0.26 ± 0.29 (buffer size 681, warmup_done=True) | Reporting Interval: 5.01s, 199 forward passes, 87 finished seqs, 87 finished reqs | Lifetime Counters: 2.76K forward passes, 43.54K prefill tokens, 163.42K decode tokens, 681 finished seqs, 681 finished reqs
+INFO:     127.0.0.1:47752 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:32:05,993 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=11] Responses received
+2026-04-15 16:32:05,995 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=11] Batch chat completed in 3.84 seconds
+2026-04-15 16:32:05,995 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=11] Round 0: Bot A response generation took 3.8391265869140625 seconds
+2026-04-15 16:32:05,996 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=11] Sending batch chat request
+2026-04-15 16:32:10 | INFO | manager | Throughput: 3289.40 tok/s (365.56 prefill, 2923.85 decode), 80.76 tok/fwd (71.79 decode, 8.98 prefill), 40.73 fwd/s, 5.19 seqs/s, 5.19 reqs/s | Seqs (#): 61 running (61 decoding, 0 prefilling, avg seq len 1130.95), 0 queued | KV Cache Usage: 20.00% allocated, 23.58% reserved, (43.58% total) | Per Manager Loop: Idle 64.07%, 0.14 ± 0.55 commands, 0.91 ± 0.31 steps scheduled (max 2) | Early Stopping: 0.26 ± 0.29 (buffer size 707, warmup_done=True) | Reporting Interval: 5.01s, 204 forward passes, 26 finished seqs, 26 finished reqs | Lifetime Counters: 2.96K forward passes, 45.37K prefill tokens, 178.06K decode tokens, 707 finished seqs, 707 finished reqs
+2026-04-15 16:32:15 | INFO | manager | Throughput: 2241.96 tok/s (0.00 prefill, 2241.96 decode), 55.33 tok/fwd (55.33 decode, 0.00 prefill), 40.52 fwd/s, 2.00 seqs/s, 2.00 reqs/s | Seqs (#): 51 running (51 decoding, 0 prefilling, avg seq len 1333.53), 0 queued | KV Cache Usage: 24.84% allocated, 16.10% reserved, (40.94% total) | Per Manager Loop: Idle 63.35%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.26 ± 0.28 (buffer size 717, warmup_done=True) | Reporting Interval: 5.01s, 203 forward passes, 10 finished seqs, 10 finished reqs | Lifetime Counters: 3.16K forward passes, 45.37K prefill tokens, 189.3K decode tokens, 717 finished seqs, 717 finished reqs
+2026-04-15 16:32:20 | INFO | manager | Throughput: 1841.26 tok/s (0.00 prefill, 1841.26 decode), 47.53 tok/fwd (47.53 decode, 0.00 prefill), 38.74 fwd/s, 1.80 seqs/s, 1.80 reqs/s | Seqs (#): 42 running (42 decoding, 0 prefilling, avg seq len 1509.67), 0 queued | KV Cache Usage: 26.72% allocated, 8.54% reserved, (35.27% total) | Per Manager Loop: Idle 64.63%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.26 ± 0.29 (buffer size 726, warmup_done=True) | Reporting Interval: 5.01s, 194 forward passes, 9 finished seqs, 9 finished reqs | Lifetime Counters: 3.36K forward passes, 45.37K prefill tokens, 198.52K decode tokens, 726 finished seqs, 726 finished reqs
+2026-04-15 16:32:25 | INFO | manager | Throughput: 1305.12 tok/s (0.00 prefill, 1305.12 decode), 31.36 tok/fwd (31.36 decode, 0.00 prefill), 41.62 fwd/s, 3.98 seqs/s, 3.98 reqs/s | Seqs (#): 22 running (22 decoding, 0 prefilling, avg seq len 1672.95), 0 queued | KV Cache Usage: 18.23% allocated, 1.86% reserved, (20.08% total) | Per Manager Loop: Idle 60.65%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.28 ± 0.30 (buffer size 746, warmup_done=True) | Reporting Interval: 5.02s, 209 forward passes, 20 finished seqs, 20 finished reqs | Lifetime Counters: 3.57K forward passes, 45.37K prefill tokens, 205.07K decode tokens, 746 finished seqs, 746 finished reqs
+INFO:     127.0.0.1:47742 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:32:26,390 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=8] Responses received
+2026-04-15 16:32:26,412 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=8] Batch chat completed in 25.81 seconds
+2026-04-15 16:32:26,413 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=8] Round 0: Bot B response generation took 25.81000828742981 seconds
+2026-04-15 16:32:26,419 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=8] Conversion to training examples took 0.006216764450073242 seconds
+2026-04-15 16:32:26,419 - cartridges.synthesize [rank=0] - INFO - Batch 8 completed
+Processing batch 12
+tokens_in_chunk: 807, start_idx: 32499, end_idx: 33306
+2026-04-15 16:32:26,421 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=12] Prompt sampling took 0.0007264614105224609 seconds
+2026-04-15 16:32:26,421 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=12] Initialization of convos took 1.6450881958007812e-05 seconds
+2026-04-15 16:32:26,421 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=12] Sending batch chat request
+INFO:     127.0.0.1:47750 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:32:27,150 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=9] Responses received
+2026-04-15 16:32:27,160 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=9] Batch chat completed in 25.80 seconds
+2026-04-15 16:32:27,161 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=9] Round 0: Bot B response generation took 25.802672863006592 seconds
+2026-04-15 16:32:27,165 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=9] Conversion to training examples took 0.004113197326660156 seconds
+2026-04-15 16:32:27,165 - cartridges.synthesize [rank=0] - INFO - Batch 9 completed
+Processing batch 13
+tokens_in_chunk: 777, start_idx: 21795, end_idx: 22572
+2026-04-15 16:32:27,166 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=13] Prompt sampling took 0.00047397613525390625 seconds
+2026-04-15 16:32:27,166 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=13] Initialization of convos took 1.0251998901367188e-05 seconds
+2026-04-15 16:32:27,166 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=13] Sending batch chat request
+INFO:     127.0.0.1:47768 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:32:28,012 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=10] Responses received
+2026-04-15 16:32:28,046 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=10] Batch chat completed in 25.79 seconds
+2026-04-15 16:32:28,047 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=10] Round 0: Bot B response generation took 25.795114517211914 seconds
+2026-04-15 16:32:28,061 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=10] Conversion to training examples took 0.012607336044311523 seconds
+2026-04-15 16:32:28,062 - cartridges.synthesize [rank=0] - INFO - Batch 10 completed
+Processing batch 14
+tokens_in_chunk: 594, start_idx: 47761, end_idx: 48355
+2026-04-15 16:32:28,063 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=14] Prompt sampling took 0.0009694099426269531 seconds
+2026-04-15 16:32:28,064 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=14] Initialization of convos took 2.3126602172851562e-05 seconds
+2026-04-15 16:32:28,064 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=14] Sending batch chat request
+2026-04-15 16:32:30 | INFO | manager | Throughput: 2801.27 tok/s (1112.08 prefill, 1689.19 decode), 62.60 tok/fwd (37.75 decode, 24.85 prefill), 44.75 fwd/s, 22.37 seqs/s, 22.37 reqs/s | Seqs (#): 6 running (6 decoding, 0 prefilling, avg seq len 1048.83), 0 queued | KV Cache Usage: 3.74% allocated, 0.98% reserved, (4.71% total) | Per Manager Loop: Idle 55.35%, 0.35 ± 1.10 commands, 0.82 ± 0.41 steps scheduled (max 2) | Early Stopping: 0.28 ± 0.30 (buffer size 858, warmup_done=True) | Reporting Interval: 5.01s, 224 forward passes, 112 finished seqs, 112 finished reqs | Lifetime Counters: 3.79K forward passes, 50.94K prefill tokens, 213.53K decode tokens, 858 finished seqs, 858 finished reqs
+INFO:     127.0.0.1:43146 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:32:30,754 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=13] Responses received
+2026-04-15 16:32:30,756 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=13] Batch chat completed in 3.59 seconds
+2026-04-15 16:32:30,757 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=13] Round 0: Bot A response generation took 3.5907435417175293 seconds
+2026-04-15 16:32:30,758 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=13] Sending batch chat request
+INFO:     127.0.0.1:43134 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:32:30,879 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=12] Responses received
+2026-04-15 16:32:30,880 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=12] Batch chat completed in 4.46 seconds
+2026-04-15 16:32:30,881 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=12] Round 0: Bot A response generation took 4.459680557250977 seconds
+2026-04-15 16:32:30,881 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=12] Sending batch chat request
+INFO:     127.0.0.1:47774 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:32:31,224 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=11] Responses received
+2026-04-15 16:32:31,261 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=11] Batch chat completed in 25.27 seconds
+2026-04-15 16:32:31,262 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=11] Round 0: Bot B response generation took 25.266512632369995 seconds
+2026-04-15 16:32:31,272 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=11] Conversion to training examples took 0.009871721267700195 seconds
+2026-04-15 16:32:31,273 - cartridges.synthesize [rank=0] - INFO - Batch 11 completed
+Processing batch 15
+tokens_in_chunk: 596, start_idx: 21567, end_idx: 22163
+2026-04-15 16:32:31,274 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=15] Prompt sampling took 0.0008511543273925781 seconds
+2026-04-15 16:32:31,275 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=15] Initialization of convos took 1.8596649169921875e-05 seconds
+2026-04-15 16:32:31,275 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=15] Sending batch chat request
+INFO:     127.0.0.1:53082 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:32:32,217 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=14] Responses received
+2026-04-15 16:32:32,219 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=14] Batch chat completed in 4.15 seconds
+2026-04-15 16:32:32,219 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=14] Round 0: Bot A response generation took 4.15514612197876 seconds
+2026-04-15 16:32:32,220 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=14] Sending batch chat request
+INFO:     127.0.0.1:53126 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:32:35 | INFO | manager | Throughput: 4487.58 tok/s (1399.00 prefill, 3088.57 decode), 110.85 tok/fwd (76.29 decode, 34.56 prefill), 40.48 fwd/s, 15.16 seqs/s, 15.16 reqs/s | Seqs (#): 58 running (58 decoding, 0 prefilling, avg seq len 998.38), 0 queued | KV Cache Usage: 12.74% allocated, 21.53% reserved, (34.28% total) | Per Manager Loop: Idle 62.76%, 0.46 ± 1.24 commands, 0.73 ± 0.44 steps scheduled (max 1) | Early Stopping: 0.27 ± 0.29 (buffer size 934, warmup_done=True) | Reporting Interval: 5.01s, 203 forward passes, 76 finished seqs, 76 finished reqs | Lifetime Counters: 3.99K forward passes, 57.95K prefill tokens, 229.01K decode tokens, 934 finished seqs, 934 finished reqs
+2026-04-15 16:32:36,372 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=15] Responses received
+2026-04-15 16:32:36,374 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=15] Batch chat completed in 5.10 seconds
+2026-04-15 16:32:36,375 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=15] Round 0: Bot A response generation took 5.100417137145996 seconds
+2026-04-15 16:32:36,376 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=15] Sending batch chat request
+2026-04-15 16:32:41 | INFO | manager | Throughput: 3465.70 tok/s (354.89 prefill, 3110.81 decode), 86.81 tok/fwd (77.92 decode, 8.89 prefill), 39.92 fwd/s, 4.19 seqs/s, 4.19 reqs/s | Seqs (#): 69 running (69 decoding, 0 prefilling, avg seq len 1112.49), 0 queued | KV Cache Usage: 22.97% allocated, 26.15% reserved, (49.12% total) | Per Manager Loop: Idle 60.62%, 0.15 ± 0.84 commands, 0.95 ± 0.51 steps scheduled (max 7) | Early Stopping: 0.26 ± 0.29 (buffer size 955, warmup_done=True) | Reporting Interval: 5.01s, 200 forward passes, 21 finished seqs, 21 finished reqs | Lifetime Counters: 4.19K forward passes, 59.73K prefill tokens, 244.6K decode tokens, 955 finished seqs, 955 finished reqs
+2026-04-15 16:32:46 | INFO | manager | Throughput: 2442.71 tok/s (0.00 prefill, 2442.71 decode), 64.54 tok/fwd (64.54 decode, 0.00 prefill), 37.85 fwd/s, 2.19 seqs/s, 2.19 reqs/s | Seqs (#): 58 running (58 decoding, 0 prefilling, avg seq len 1312.98), 0 queued | KV Cache Usage: 28.37% allocated, 17.54% reserved, (45.91% total) | Per Manager Loop: Idle 61.97%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.27 ± 0.29 (buffer size 966, warmup_done=True) | Reporting Interval: 5.02s, 190 forward passes, 11 finished seqs, 11 finished reqs | Lifetime Counters: 4.38K forward passes, 59.73K prefill tokens, 256.86K decode tokens, 966 finished seqs, 966 finished reqs
+2026-04-15 16:32:51 | INFO | manager | Throughput: 1926.97 tok/s (0.00 prefill, 1926.97 decode), 51.04 tok/fwd (51.04 decode, 0.00 prefill), 37.75 fwd/s, 3.20 seqs/s, 3.20 reqs/s | Seqs (#): 42 running (42 decoding, 0 prefilling, avg seq len 1506.07), 0 queued | KV Cache Usage: 27.38% allocated, 7.86% reserved, (35.24% total) | Per Manager Loop: Idle 62.29%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.27 ± 0.29 (buffer size 982, warmup_done=True) | Reporting Interval: 5.01s, 189 forward passes, 16 finished seqs, 16 finished reqs | Lifetime Counters: 4.57K forward passes, 59.73K prefill tokens, 266.51K decode tokens, 982 finished seqs, 982 finished reqs
+INFO:     127.0.0.1:53114 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:32:56,039 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=12] Responses received
+2026-04-15 16:32:56,070 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=12] Batch chat completed in 25.19 seconds
+2026-04-15 16:32:56,071 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=12] Round 0: Bot B response generation took 25.19048500061035 seconds
+2026-04-15 16:32:56,081 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=12] Conversion to training examples took 0.00935816764831543 seconds
+2026-04-15 16:32:56,082 - cartridges.synthesize [rank=0] - INFO - Batch 12 completed
+Processing batch 16
+tokens_in_chunk: 519, start_idx: 80064, end_idx: 80583
+2026-04-15 16:32:56,084 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=16] Prompt sampling took 0.0009634494781494141 seconds
+2026-04-15 16:32:56,084 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=16] Initialization of convos took 2.288818359375e-05 seconds
+2026-04-15 16:32:56,084 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=16] Sending batch chat request
+2026-04-15 16:32:56 | INFO | manager | Throughput: 1407.32 tok/s (312.36 prefill, 1094.96 decode), 32.58 tok/fwd (25.35 decode, 7.23 prefill), 43.20 fwd/s, 4.98 seqs/s, 4.98 reqs/s | Seqs (#): 49 running (49 decoding, 0 prefilling, avg seq len 1004.10), 0 queued | KV Cache Usage: 16.19% allocated, 5.44% reserved, (21.63% total) | Per Manager Loop: Idle 64.90%, 0.13 ± 0.41 commands, 0.89 ± 0.31 steps scheduled (max 1) | Early Stopping: 0.28 ± 0.30 (buffer size 1007, warmup_done=True) | Reporting Interval: 5.02s, 217 forward passes, 25 finished seqs, 25 finished reqs | Lifetime Counters: 4.79K forward passes, 61.3K prefill tokens, 272.01K decode tokens, 1.01K finished seqs, 1.01K finished reqs
+INFO:     127.0.0.1:53098 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:32:57,450 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=13] Responses received
+2026-04-15 16:32:57,504 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=13] Batch chat completed in 26.75 seconds
+2026-04-15 16:32:57,505 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=13] Round 0: Bot B response generation took 26.74750566482544 seconds
+2026-04-15 16:32:57,518 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=13] Conversion to training examples took 0.012593269348144531 seconds
+2026-04-15 16:32:57,519 - cartridges.synthesize [rank=0] - INFO - Batch 13 completed
+Processing batch 17
+tokens_in_chunk: 537, start_idx: 19873, end_idx: 20410
+2026-04-15 16:32:57,520 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=17] Prompt sampling took 0.0008728504180908203 seconds
+2026-04-15 16:32:57,520 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=17] Initialization of convos took 2.0503997802734375e-05 seconds
+2026-04-15 16:32:57,521 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=17] Sending batch chat request
+INFO:     127.0.0.1:53136 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:32:58,589 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=14] Responses received
+2026-04-15 16:32:58,634 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=14] Batch chat completed in 26.41 seconds
+2026-04-15 16:32:58,635 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=14] Round 0: Bot B response generation took 26.415499925613403 seconds
+2026-04-15 16:32:58,646 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=14] Conversion to training examples took 0.01064443588256836 seconds
+2026-04-15 16:32:58,647 - cartridges.synthesize [rank=0] - INFO - Batch 14 completed
+Processing batch 18
+tokens_in_chunk: 977, start_idx: 90381, end_idx: 91358
+2026-04-15 16:32:58,649 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=18] Prompt sampling took 0.0013585090637207031 seconds
+2026-04-15 16:32:58,650 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=18] Initialization of convos took 2.0503997802734375e-05 seconds
+2026-04-15 16:32:58,650 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=18] Sending batch chat request
+INFO:     127.0.0.1:41756 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:00,283 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=16] Responses received
+2026-04-15 16:33:00,285 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=16] Batch chat completed in 4.20 seconds
+2026-04-15 16:33:00,286 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=16] Round 0: Bot A response generation took 4.201559543609619 seconds
+2026-04-15 16:33:00,286 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=16] Sending batch chat request
+INFO:     127.0.0.1:41764 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:01,030 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=17] Responses received
+2026-04-15 16:33:01,032 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=17] Batch chat completed in 3.51 seconds
+2026-04-15 16:33:01,032 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=17] Round 0: Bot A response generation took 3.5115036964416504 seconds
+2026-04-15 16:33:01,033 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=17] Sending batch chat request
+INFO:     127.0.0.1:53142 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:01,357 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=15] Responses received
+2026-04-15 16:33:01,394 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=15] Batch chat completed in 25.02 seconds
+2026-04-15 16:33:01,394 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=15] Round 0: Bot B response generation took 25.018887996673584 seconds
+2026-04-15 16:33:01,405 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=15] Conversion to training examples took 0.010133743286132812 seconds
+2026-04-15 16:33:01,406 - cartridges.synthesize [rank=0] - INFO - Batch 15 completed
+Processing batch 19
+tokens_in_chunk: 857, start_idx: 61685, end_idx: 62542
+2026-04-15 16:33:01,408 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=19] Prompt sampling took 0.001146554946899414 seconds
+2026-04-15 16:33:01,408 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=19] Initialization of convos took 2.2411346435546875e-05 seconds
+2026-04-15 16:33:01,408 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=19] Sending batch chat request
+2026-04-15 16:33:01 | INFO | manager | Throughput: 3196.51 tok/s (1425.73 prefill, 1770.77 decode), 71.07 tok/fwd (39.37 decode, 31.70 prefill), 44.98 fwd/s, 21.79 seqs/s, 21.79 reqs/s | Seqs (#): 70 running (70 decoding, 0 prefilling, avg seq len 691.20), 0 queued | KV Cache Usage: 7.06% allocated, 17.40% reserved, (24.45% total) | Per Manager Loop: Idle 59.24%, 0.46 ± 1.49 commands, 0.80 ± 0.42 steps scheduled (max 2) | Early Stopping: 0.28 ± 0.30 (buffer size 1116, warmup_done=True) | Reporting Interval: 5.00s, 225 forward passes, 109 finished seqs, 109 finished reqs | Lifetime Counters: 5.01K forward passes, 68.43K prefill tokens, 280.87K decode tokens, 1.12K finished seqs, 1.12K finished reqs
+INFO:     127.0.0.1:44290 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:02,540 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=18] Responses received
+2026-04-15 16:33:02,542 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=18] Batch chat completed in 3.89 seconds
+2026-04-15 16:33:02,542 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=18] Round 0: Bot A response generation took 3.892385482788086 seconds
+2026-04-15 16:33:02,543 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=18] Sending batch chat request
+INFO:     127.0.0.1:44326 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:05,080 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=19] Responses received
+2026-04-15 16:33:05,082 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=19] Batch chat completed in 3.67 seconds
+2026-04-15 16:33:05,083 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=19] Round 0: Bot A response generation took 3.675058126449585 seconds
+2026-04-15 16:33:05,084 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=19] Sending batch chat request
+2026-04-15 16:33:06 | INFO | manager | Throughput: 4678.07 tok/s (1136.47 prefill, 3541.61 decode), 116.71 tok/fwd (88.36 decode, 28.35 prefill), 40.08 fwd/s, 16.35 seqs/s, 16.35 reqs/s | Seqs (#): 82 running (82 decoding, 0 prefilling, avg seq len 996.09), 0 queued | KV Cache Usage: 15.55% allocated, 25.89% reserved, (41.44% total) | Per Manager Loop: Idle 58.90%, 0.39 ± 1.24 commands, 0.83 ± 0.39 steps scheduled (max 2) | Early Stopping: 0.27 ± 0.29 (buffer size 1198, warmup_done=True) | Reporting Interval: 5.01s, 201 forward passes, 82 finished seqs, 82 finished reqs | Lifetime Counters: 5.21K forward passes, 74.13K prefill tokens, 298.63K decode tokens, 1.2K finished seqs, 1.2K finished reqs
+2026-04-15 16:33:11 | INFO | manager | Throughput: 2910.72 tok/s (0.00 prefill, 2910.72 decode), 72.11 tok/fwd (72.11 decode, 0.00 prefill), 40.36 fwd/s, 4.40 seqs/s, 4.40 reqs/s | Seqs (#): 60 running (60 decoding, 0 prefilling, avg seq len 1197.90), 0 queued | KV Cache Usage: 21.73% allocated, 21.44% reserved, (43.16% total) | Per Manager Loop: Idle 53.37%, 0.00 ± 0.00 commands, 1.00 ± 0.07 steps scheduled (max 2) | Early Stopping: 0.27 ± 0.29 (buffer size 1220, warmup_done=True) | Reporting Interval: 5.00s, 202 forward passes, 22 finished seqs, 22 finished reqs | Lifetime Counters: 5.42K forward passes, 74.13K prefill tokens, 313.19K decode tokens, 1.22K finished seqs, 1.22K finished reqs
+2026-04-15 16:33:16 | INFO | manager | Throughput: 2173.99 tok/s (0.00 prefill, 2173.99 decode), 54.41 tok/fwd (54.41 decode, 0.00 prefill), 39.95 fwd/s, 2.20 seqs/s, 2.20 reqs/s | Seqs (#): 49 running (49 decoding, 0 prefilling, avg seq len 1389.43), 0 queued | KV Cache Usage: 25.37% allocated, 13.17% reserved, (38.54% total) | Per Manager Loop: Idle 56.50%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.27 ± 0.29 (buffer size 1231, warmup_done=True) | Reporting Interval: 5.01s, 200 forward passes, 11 finished seqs, 11 finished reqs | Lifetime Counters: 5.62K forward passes, 74.13K prefill tokens, 324.08K decode tokens, 1.23K finished seqs, 1.23K finished reqs
+2026-04-15 16:33:21 | INFO | manager | Throughput: 1520.30 tok/s (0.00 prefill, 1520.30 decode), 36.49 tok/fwd (36.49 decode, 0.00 prefill), 41.66 fwd/s, 4.58 seqs/s, 4.58 reqs/s | Seqs (#): 26 running (26 decoding, 0 prefilling, avg seq len 1658.19), 0 queued | KV Cache Usage: 18.01% allocated, 4.27% reserved, (22.28% total) | Per Manager Loop: Idle 60.09%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.28 ± 0.29 (buffer size 1254, warmup_done=True) | Reporting Interval: 5.02s, 209 forward passes, 23 finished seqs, 23 finished reqs | Lifetime Counters: 5.83K forward passes, 74.13K prefill tokens, 331.7K decode tokens, 1.25K finished seqs, 1.25K finished reqs
+INFO:     127.0.0.1:44310 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:22,130 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=17] Responses received
+2026-04-15 16:33:22,158 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=17] Batch chat completed in 21.13 seconds
+2026-04-15 16:33:22,159 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=17] Round 0: Bot B response generation took 21.126821279525757 seconds
+2026-04-15 16:33:22,169 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=17] Conversion to training examples took 0.009378433227539062 seconds
+2026-04-15 16:33:22,170 - cartridges.synthesize [rank=0] - INFO - Batch 17 completed
+Processing batch 20
+tokens_in_chunk: 959, start_idx: 45756, end_idx: 46715
+2026-04-15 16:33:22,172 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=20] Prompt sampling took 0.0012459754943847656 seconds
+2026-04-15 16:33:22,172 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=20] Initialization of convos took 2.47955322265625e-05 seconds
+2026-04-15 16:33:22,173 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=20] Sending batch chat request
+INFO:     127.0.0.1:44296 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:25,545 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=16] Responses received
+2026-04-15 16:33:25,590 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=16] Batch chat completed in 25.30 seconds
+2026-04-15 16:33:25,590 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=16] Round 0: Bot B response generation took 25.30449366569519 seconds
+2026-04-15 16:33:25,602 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=16] Conversion to training examples took 0.01113128662109375 seconds
+2026-04-15 16:33:25,603 - cartridges.synthesize [rank=0] - INFO - Batch 16 completed
+Processing batch 21
+tokens_in_chunk: 697, start_idx: 9261, end_idx: 9958
+2026-04-15 16:33:25,604 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=21] Prompt sampling took 0.0008721351623535156 seconds
+2026-04-15 16:33:25,605 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=21] Initialization of convos took 2.1457672119140625e-05 seconds
+2026-04-15 16:33:25,605 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=21] Sending batch chat request
+INFO:     127.0.0.1:33156 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:26,033 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=20] Responses received
+2026-04-15 16:33:26,035 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=20] Batch chat completed in 3.86 seconds
+2026-04-15 16:33:26,035 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=20] Round 0: Bot A response generation took 3.86238431930542 seconds
+2026-04-15 16:33:26,035 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=20] Sending batch chat request
+2026-04-15 16:33:26 | INFO | manager | Throughput: 2710.42 tok/s (1178.46 prefill, 1531.96 decode), 65.71 tok/fwd (37.14 decode, 28.57 prefill), 41.25 fwd/s, 7.77 seqs/s, 7.77 reqs/s | Seqs (#): 83 running (83 decoding, 0 prefilling, avg seq len 1174.59), 0 queued | KV Cache Usage: 20.36% allocated, 13.51% reserved, (33.87% total) | Per Manager Loop: Idle 61.07%, 0.38 ± 1.24 commands, 0.81 ± 0.40 steps scheduled (max 2) | Early Stopping: 0.28 ± 0.29 (buffer size 1293, warmup_done=True) | Reporting Interval: 5.02s, 207 forward passes, 39 finished seqs, 39 finished reqs | Lifetime Counters: 6.03K forward passes, 80.05K prefill tokens, 339.39K decode tokens, 1.29K finished seqs, 1.29K finished reqs
+INFO:     127.0.0.1:44328 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:28,430 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=18] Responses received
+2026-04-15 16:33:28,458 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=18] Batch chat completed in 25.92 seconds
+2026-04-15 16:33:28,459 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=18] Round 0: Bot B response generation took 25.915888786315918 seconds
+2026-04-15 16:33:28,467 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=18] Conversion to training examples took 0.007689714431762695 seconds
+2026-04-15 16:33:28,467 - cartridges.synthesize [rank=0] - INFO - Batch 18 completed
+Processing batch 22
+tokens_in_chunk: 976, start_idx: 60271, end_idx: 61247
+2026-04-15 16:33:28,469 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=22] Prompt sampling took 0.0009462833404541016 seconds
+2026-04-15 16:33:28,469 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=22] Initialization of convos took 2.2411346435546875e-05 seconds
+2026-04-15 16:33:28,469 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=22] Sending batch chat request
+INFO:     127.0.0.1:33164 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:29,061 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=21] Responses received
+2026-04-15 16:33:29,062 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=21] Batch chat completed in 3.46 seconds
+2026-04-15 16:33:29,063 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=21] Round 0: Bot A response generation took 3.458195686340332 seconds
+2026-04-15 16:33:29,063 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=21] Sending batch chat request
+INFO:     127.0.0.1:44340 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:30,713 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=19] Responses received
+2026-04-15 16:33:30,737 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=19] Batch chat completed in 25.65 seconds
+2026-04-15 16:33:30,737 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=19] Round 0: Bot B response generation took 25.65396809577942 seconds
+2026-04-15 16:33:30,744 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=19] Conversion to training examples took 0.006508588790893555 seconds
+2026-04-15 16:33:30,744 - cartridges.synthesize [rank=0] - INFO - Batch 19 completed
+Processing batch 23
+tokens_in_chunk: 719, start_idx: 44333, end_idx: 45052
+2026-04-15 16:33:30,745 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=23] Prompt sampling took 0.0006411075592041016 seconds
+2026-04-15 16:33:30,746 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=23] Initialization of convos took 1.4066696166992188e-05 seconds
+2026-04-15 16:33:30,746 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=23] Sending batch chat request
+2026-04-15 16:33:31 | INFO | manager | Throughput: 3706.30 tok/s (1096.91 prefill, 2609.38 decode), 93.40 tok/fwd (65.76 decode, 27.64 prefill), 39.68 fwd/s, 21.93 seqs/s, 21.93 reqs/s | Seqs (#): 69 running (69 decoding, 0 prefilling, avg seq len 979.01), 0 queued | KV Cache Usage: 10.44% allocated, 14.92% reserved, (25.35% total) | Per Manager Loop: Idle 56.08%, 0.39 ± 1.07 commands, 0.80 ± 0.42 steps scheduled (max 2) | Early Stopping: 0.28 ± 0.29 (buffer size 1403, warmup_done=True) | Reporting Interval: 5.01s, 199 forward passes, 110 finished seqs, 110 finished reqs | Lifetime Counters: 6.23K forward passes, 85.55K prefill tokens, 352.48K decode tokens, 1.4K finished seqs, 1.4K finished reqs
+INFO:     127.0.0.1:39172 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:33,102 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=22] Responses received
+2026-04-15 16:33:33,103 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=22] Batch chat completed in 4.63 seconds
+2026-04-15 16:33:33,103 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=22] Round 0: Bot A response generation took 4.63385272026062 seconds
+2026-04-15 16:33:33,103 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=22] Sending batch chat request
+INFO:     127.0.0.1:39198 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:35,121 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=23] Responses received
+2026-04-15 16:33:35,123 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=23] Batch chat completed in 4.38 seconds
+2026-04-15 16:33:35,124 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=23] Round 0: Bot A response generation took 4.3777923583984375 seconds
+2026-04-15 16:33:35,124 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=23] Sending batch chat request
+2026-04-15 16:33:36 | INFO | manager | Throughput: 3300.94 tok/s (625.61 prefill, 2675.32 decode), 78.37 tok/fwd (63.52 decode, 14.85 prefill), 42.12 fwd/s, 12.18 seqs/s, 12.18 reqs/s | Seqs (#): 72 running (72 decoding, 0 prefilling, avg seq len 1109.81), 0 queued | KV Cache Usage: 16.48% allocated, 21.40% reserved, (37.88% total) | Per Manager Loop: Idle 59.57%, 0.28 ± 1.47 commands, 0.91 ± 0.30 steps scheduled (max 2) | Early Stopping: 0.27 ± 0.29 (buffer size 1464, warmup_done=True) | Reporting Interval: 5.01s, 211 forward passes, 61 finished seqs, 61 finished reqs | Lifetime Counters: 6.44K forward passes, 88.68K prefill tokens, 365.88K decode tokens, 1.46K finished seqs, 1.46K finished reqs
+2026-04-15 16:33:41 | INFO | manager | Throughput: 2402.56 tok/s (0.00 prefill, 2402.56 decode), 58.00 tok/fwd (58.00 decode, 0.00 prefill), 41.42 fwd/s, 4.78 seqs/s, 4.78 reqs/s | Seqs (#): 48 running (48 decoding, 0 prefilling, avg seq len 1378.42), 0 queued | KV Cache Usage: 21.12% allocated, 14.94% reserved, (36.06% total) | Per Manager Loop: Idle 56.26%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.27 ± 0.29 (buffer size 1488, warmup_done=True) | Reporting Interval: 5.02s, 208 forward passes, 24 finished seqs, 24 finished reqs | Lifetime Counters: 6.65K forward passes, 88.68K prefill tokens, 377.94K decode tokens, 1.49K finished seqs, 1.49K finished reqs
+2026-04-15 16:33:46 | INFO | manager | Throughput: 1860.91 tok/s (0.00 prefill, 1860.91 decode), 47.41 tok/fwd (47.41 decode, 0.00 prefill), 39.25 fwd/s, 0.40 seqs/s, 0.40 reqs/s | Seqs (#): 46 running (46 decoding, 0 prefilling, avg seq len 1582.70), 0 queued | KV Cache Usage: 27.36% allocated, 10.33% reserved, (37.68% total) | Per Manager Loop: Idle 60.08%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.27 ± 0.29 (buffer size 1490, warmup_done=True) | Reporting Interval: 5.02s, 197 forward passes, 2 finished seqs, 2 finished reqs | Lifetime Counters: 6.85K forward passes, 88.68K prefill tokens, 387.28K decode tokens, 1.49K finished seqs, 1.49K finished reqs
+2026-04-15 16:33:51 | INFO | manager | Throughput: 1590.08 tok/s (0.00 prefill, 1590.08 decode), 42.14 tok/fwd (42.14 decode, 0.00 prefill), 37.74 fwd/s, 2.40 seqs/s, 2.40 reqs/s | Seqs (#): 34 running (34 decoding, 0 prefilling, avg seq len 1794.91), 0 queued | KV Cache Usage: 25.93% allocated, 3.72% reserved, (29.65% total) | Per Manager Loop: Idle 60.16%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.27 ± 0.29 (buffer size 1502, warmup_done=True) | Reporting Interval: 5.01s, 189 forward passes, 12 finished seqs, 12 finished reqs | Lifetime Counters: 7.04K forward passes, 88.68K prefill tokens, 395.25K decode tokens, 1.5K finished seqs, 1.5K finished reqs
+INFO:     127.0.0.1:33174 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:52,263 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=20] Responses received
+2026-04-15 16:33:52,309 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=20] Batch chat completed in 26.27 seconds
+2026-04-15 16:33:52,310 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=20] Round 0: Bot B response generation took 26.274932861328125 seconds
+2026-04-15 16:33:52,324 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=20] Conversion to training examples took 0.013296365737915039 seconds
+2026-04-15 16:33:52,325 - cartridges.synthesize [rank=0] - INFO - Batch 20 completed
+Processing batch 24
+tokens_in_chunk: 787, start_idx: 73308, end_idx: 74095
+2026-04-15 16:33:52,327 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=24] Prompt sampling took 0.001397848129272461 seconds
+2026-04-15 16:33:52,328 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=24] Initialization of convos took 3.123283386230469e-05 seconds
+2026-04-15 16:33:52,329 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=24] Sending batch chat request
+INFO:     127.0.0.1:39184 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:54,767 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=21] Responses received
+2026-04-15 16:33:54,794 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=21] Batch chat completed in 25.73 seconds
+2026-04-15 16:33:54,795 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=21] Round 0: Bot B response generation took 25.73206663131714 seconds
+2026-04-15 16:33:54,804 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=21] Conversion to training examples took 0.008777141571044922 seconds
+2026-04-15 16:33:54,805 - cartridges.synthesize [rank=0] - INFO - Batch 21 completed
+Processing batch 25
+tokens_in_chunk: 590, start_idx: 31704, end_idx: 32294
+2026-04-15 16:33:54,807 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=25] Prompt sampling took 0.0009524822235107422 seconds
+2026-04-15 16:33:54,807 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=25] Initialization of convos took 4.4345855712890625e-05 seconds
+2026-04-15 16:33:54,808 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=25] Sending batch chat request
+INFO:     127.0.0.1:50176 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:56,634 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=24] Responses received
+2026-04-15 16:33:56,636 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=24] Batch chat completed in 4.31 seconds
+2026-04-15 16:33:56,637 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=24] Round 0: Bot A response generation took 4.308134317398071 seconds
+2026-04-15 16:33:56,637 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=24] Sending batch chat request
+2026-04-15 16:33:56 | INFO | manager | Throughput: 2361.48 tok/s (762.95 prefill, 1598.53 decode), 55.83 tok/fwd (37.79 decode, 18.04 prefill), 42.30 fwd/s, 14.76 seqs/s, 14.76 reqs/s | Seqs (#): 24 running (24 decoding, 0 prefilling, avg seq len 1426.04), 0 queued | KV Cache Usage: 13.39% allocated, 2.89% reserved, (16.28% total) | Per Manager Loop: Idle 54.61%, 0.26 ± 0.87 commands, 0.87 ± 0.38 steps scheduled (max 2) | Early Stopping: 0.28 ± 0.29 (buffer size 1576, warmup_done=True) | Reporting Interval: 5.01s, 212 forward passes, 74 finished seqs, 74 finished reqs | Lifetime Counters: 7.25K forward passes, 92.51K prefill tokens, 403.26K decode tokens, 1.58K finished seqs, 1.58K finished reqs
+INFO:     127.0.0.1:39206 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50182 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:33:58,840 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=25] Responses received
+2026-04-15 16:33:58,842 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=25] Batch chat completed in 4.03 seconds
+2026-04-15 16:33:58,843 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=25] Round 0: Bot A response generation took 4.035211801528931 seconds
+2026-04-15 16:33:58,844 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=25] Sending batch chat request
+2026-04-15 16:33:58,849 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=22] Responses received
+2026-04-15 16:33:58,878 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=22] Batch chat completed in 25.77 seconds
+2026-04-15 16:33:58,879 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=22] Round 0: Bot B response generation took 25.775761365890503 seconds
+2026-04-15 16:33:58,889 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=22] Conversion to training examples took 0.009795188903808594 seconds
+2026-04-15 16:33:58,890 - cartridges.synthesize [rank=0] - INFO - Batch 22 completed
+Processing batch 26
+tokens_in_chunk: 1012, start_idx: 9913, end_idx: 10925
+2026-04-15 16:33:58,892 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=26] Prompt sampling took 0.0014138221740722656 seconds
+2026-04-15 16:33:58,892 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=26] Initialization of convos took 2.4080276489257812e-05 seconds
+2026-04-15 16:33:58,893 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=26] Sending batch chat request
+INFO:     127.0.0.1:39222 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:34:01,008 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=23] Responses received
+2026-04-15 16:34:01,043 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=23] Batch chat completed in 25.92 seconds
+2026-04-15 16:34:01,044 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=23] Round 0: Bot B response generation took 25.920201778411865 seconds
+2026-04-15 16:34:01,054 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=23] Conversion to training examples took 0.009420394897460938 seconds
+2026-04-15 16:34:01,055 - cartridges.synthesize [rank=0] - INFO - Batch 23 completed
+Processing batch 27
+tokens_in_chunk: 731, start_idx: 5526, end_idx: 6257
+2026-04-15 16:34:01,056 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=27] Prompt sampling took 0.0007157325744628906 seconds
+2026-04-15 16:34:01,057 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=27] Initialization of convos took 1.9311904907226562e-05 seconds
+2026-04-15 16:34:01,057 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=27] Sending batch chat request
+2026-04-15 16:34:01 | INFO | manager | Throughput: 4050.87 tok/s (1643.60 prefill, 2407.27 decode), 100.55 tok/fwd (59.75 decode, 40.80 prefill), 40.29 fwd/s, 14.16 seqs/s, 14.16 reqs/s | Seqs (#): 81 running (81 decoding, 0 prefilling, avg seq len 902.98), 0 queued | KV Cache Usage: 12.13% allocated, 18.91% reserved, (31.04% total) | Per Manager Loop: Idle 57.56%, 0.50 ± 1.74 commands, 0.80 ± 0.45 steps scheduled (max 2) | Early Stopping: 0.28 ± 0.30 (buffer size 1647, warmup_done=True) | Reporting Interval: 5.01s, 202 forward passes, 71 finished seqs, 71 finished reqs | Lifetime Counters: 7.45K forward passes, 100.75K prefill tokens, 415.33K decode tokens, 1.65K finished seqs, 1.65K finished reqs
+INFO:     127.0.0.1:47962 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:34:02,503 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=26] Responses received
+2026-04-15 16:34:02,505 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=26] Batch chat completed in 3.61 seconds
+2026-04-15 16:34:02,505 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=26] Round 0: Bot A response generation took 3.612870216369629 seconds
+2026-04-15 16:34:02,506 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=26] Sending batch chat request
+2026-04-15 16:34:06 | INFO | manager | Throughput: 3261.40 tok/s (295.87 prefill, 2965.53 decode), 79.30 tok/fwd (72.11 decode, 7.19 prefill), 41.13 fwd/s, 10.18 seqs/s, 10.18 reqs/s | Seqs (#): 62 running (62 decoding, 0 prefilling, avg seq len 1172.52), 0 queued | KV Cache Usage: 19.18% allocated, 23.16% reserved, (42.33% total) | Per Manager Loop: Idle 53.50%, 0.14 ± 0.63 commands, 0.92 ± 0.28 steps scheduled (max 2) | Early Stopping: 0.27 ± 0.29 (buffer size 1698, warmup_done=True) | Reporting Interval: 5.01s, 206 forward passes, 51 finished seqs, 51 finished reqs | Lifetime Counters: 7.66K forward passes, 102.23K prefill tokens, 430.18K decode tokens, 1.7K finished seqs, 1.7K finished reqs
+2026-04-15 16:34:11 | INFO | manager | Throughput: 2326.13 tok/s (0.00 prefill, 2326.13 decode), 57.86 tok/fwd (57.86 decode, 0.00 prefill), 40.20 fwd/s, 1.39 seqs/s, 1.39 reqs/s | Seqs (#): 55 running (55 decoding, 0 prefilling, avg seq len 1380.95), 0 queued | KV Cache Usage: 25.88% allocated, 17.07% reserved, (42.94% total) | Per Manager Loop: Idle 55.77%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.27 ± 0.29 (buffer size 1705, warmup_done=True) | Reporting Interval: 5.02s, 202 forward passes, 7 finished seqs, 7 finished reqs | Lifetime Counters: 7.86K forward passes, 102.23K prefill tokens, 441.87K decode tokens, 1.71K finished seqs, 1.71K finished reqs
+INFO:     127.0.0.1:47978 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:34:14,090 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=27] Responses received
+2026-04-15 16:34:14,092 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=27] Batch chat completed in 13.04 seconds
+2026-04-15 16:34:14,093 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=27] Round 0: Bot A response generation took 13.035833597183228 seconds
+2026-04-15 16:34:14,093 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=27] Sending batch chat request
+2026-04-15 16:34:16 | INFO | manager | Throughput: 2724.87 tok/s (381.12 prefill, 2343.75 decode), 75.07 tok/fwd (64.57 decode, 10.50 prefill), 36.30 fwd/s, 2.59 seqs/s, 2.59 reqs/s | Seqs (#): 74 running (74 decoding, 0 prefilling, avg seq len 1328.57), 0 queued | KV Cache Usage: 31.65% allocated, 16.19% reserved, (47.84% total) | Per Manager Loop: Idle 59.90%, 0.16 ± 0.82 commands, 0.92 ± 0.27 steps scheduled (max 1) | Early Stopping: 0.27 ± 0.29 (buffer size 1718, warmup_done=True) | Reporting Interval: 5.01s, 182 forward passes, 13 finished seqs, 13 finished reqs | Lifetime Counters: 8.04K forward passes, 104.14K prefill tokens, 453.62K decode tokens, 1.72K finished seqs, 1.72K finished reqs
+2026-04-15 16:34:21 | INFO | manager | Throughput: 2306.98 tok/s (0.00 prefill, 2306.98 decode), 63.15 tok/fwd (63.15 decode, 0.00 prefill), 36.53 fwd/s, 4.99 seqs/s, 4.99 reqs/s | Seqs (#): 49 running (49 decoding, 0 prefilling, avg seq len 1500.14), 0 queued | KV Cache Usage: 27.81% allocated, 10.77% reserved, (38.57% total) | Per Manager Loop: Idle 56.14%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.28 ± 0.30 (buffer size 1743, warmup_done=True) | Reporting Interval: 5.01s, 183 forward passes, 25 finished seqs, 25 finished reqs | Lifetime Counters: 8.22K forward passes, 104.14K prefill tokens, 465.18K decode tokens, 1.74K finished seqs, 1.74K finished reqs
+INFO:     127.0.0.1:50196 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:34:23,356 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=24] Responses received
+2026-04-15 16:34:23,394 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=24] Batch chat completed in 26.76 seconds
+2026-04-15 16:34:23,395 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=24] Round 0: Bot B response generation took 26.75812077522278 seconds
+2026-04-15 16:34:23,407 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=24] Conversion to training examples took 0.011150360107421875 seconds
+2026-04-15 16:34:23,408 - cartridges.synthesize [rank=0] - INFO - Batch 24 completed
+Processing batch 28
+tokens_in_chunk: 717, start_idx: 10628, end_idx: 11345
+2026-04-15 16:34:23,409 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=28] Prompt sampling took 0.0008988380432128906 seconds
+2026-04-15 16:34:23,409 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=28] Initialization of convos took 2.09808349609375e-05 seconds
+2026-04-15 16:34:23,410 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=28] Sending batch chat request
+INFO:     127.0.0.1:47948 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:34:25,925 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=25] Responses received
+2026-04-15 16:34:25,976 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=25] Batch chat completed in 27.13 seconds
+2026-04-15 16:34:25,977 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=25] Round 0: Bot B response generation took 27.133516550064087 seconds
+2026-04-15 16:34:25,994 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=25] Conversion to training examples took 0.016161203384399414 seconds
+2026-04-15 16:34:25,994 - cartridges.synthesize [rank=0] - INFO - Batch 25 completed
+Processing batch 29
+tokens_in_chunk: 611, start_idx: 9479, end_idx: 10090
+2026-04-15 16:34:25,996 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=29] Prompt sampling took 0.0008771419525146484 seconds
+2026-04-15 16:34:25,997 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=29] Initialization of convos took 2.09808349609375e-05 seconds
+2026-04-15 16:34:25,997 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=29] Sending batch chat request
+2026-04-15 16:34:26 | INFO | manager | Throughput: 2706.18 tok/s (727.90 prefill, 1978.27 decode), 70.73 tok/fwd (51.71 decode, 19.03 prefill), 38.26 fwd/s, 9.96 seqs/s, 9.96 reqs/s | Seqs (#): 63 running (63 decoding, 0 prefilling, avg seq len 1144.86), 0 queued | KV Cache Usage: 20.26% allocated, 10.75% reserved, (31.02% total) | Per Manager Loop: Idle 53.78%, 0.28 ± 1.05 commands, 0.85 ± 0.38 steps scheduled (max 2) | Early Stopping: 0.28 ± 0.30 (buffer size 1793, warmup_done=True) | Reporting Interval: 5.02s, 192 forward passes, 50 finished seqs, 50 finished reqs | Lifetime Counters: 8.42K forward passes, 107.79K prefill tokens, 475.11K decode tokens, 1.79K finished seqs, 1.79K finished reqs
+INFO:     127.0.0.1:59614 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:34:27,215 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=28] Responses received
+2026-04-15 16:34:27,217 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=28] Batch chat completed in 3.81 seconds
+2026-04-15 16:34:27,217 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=28] Round 0: Bot A response generation took 3.8078725337982178 seconds
+2026-04-15 16:34:27,218 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=28] Sending batch chat request
+INFO:     127.0.0.1:47990 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:34:29,736 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=26] Responses received
+2026-04-15 16:34:29,762 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=26] Batch chat completed in 27.26 seconds
+2026-04-15 16:34:29,762 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=26] Round 0: Bot B response generation took 27.256545305252075 seconds
+2026-04-15 16:34:29,770 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=26] Conversion to training examples took 0.00684356689453125 seconds
+2026-04-15 16:34:29,770 - cartridges.synthesize [rank=0] - INFO - Batch 26 completed
+Processing batch 30
+tokens_in_chunk: 769, start_idx: 18998, end_idx: 19767
+2026-04-15 16:34:29,771 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=30] Prompt sampling took 0.0006704330444335938 seconds
+2026-04-15 16:34:29,771 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=30] Initialization of convos took 1.5497207641601562e-05 seconds
+2026-04-15 16:34:29,771 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=30] Sending batch chat request
+INFO:     127.0.0.1:59620 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:34:30,211 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=29] Responses received
+2026-04-15 16:34:30,213 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=29] Batch chat completed in 4.22 seconds
+2026-04-15 16:34:30,213 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=29] Round 0: Bot A response generation took 4.2161900997161865 seconds
+2026-04-15 16:34:30,213 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=29] Sending batch chat request
+2026-04-15 16:34:31 | INFO | manager | Throughput: 3753.68 tok/s (1056.67 prefill, 2697.01 decode), 100.49 tok/fwd (72.20 decode, 28.29 prefill), 37.35 fwd/s, 18.78 seqs/s, 18.78 reqs/s | Seqs (#): 65 running (65 decoding, 0 prefilling, avg seq len 1006.29), 0 queued | KV Cache Usage: 16.75% allocated, 17.19% reserved, (33.94% total) | Per Manager Loop: Idle 57.61%, 0.41 ± 1.12 commands, 0.79 ± 0.42 steps scheduled (max 2) | Early Stopping: 0.28 ± 0.30 (buffer size 1887, warmup_done=True) | Reporting Interval: 5.01s, 187 forward passes, 94 finished seqs, 94 finished reqs | Lifetime Counters: 8.6K forward passes, 113.08K prefill tokens, 488.61K decode tokens, 1.89K finished seqs, 1.89K finished reqs
+INFO:     127.0.0.1:40734 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:34:34,270 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=30] Responses received
+2026-04-15 16:34:34,271 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=30] Batch chat completed in 4.50 seconds
+2026-04-15 16:34:34,271 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=30] Round 0: Bot A response generation took 4.500058889389038 seconds
+2026-04-15 16:34:34,272 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=30] Sending batch chat request
+2026-04-15 16:34:36 | INFO | manager | Throughput: 2916.62 tok/s (356.46 prefill, 2560.16 decode), 72.15 tok/fwd (63.33 decode, 8.82 prefill), 40.43 fwd/s, 6.37 seqs/s, 6.37 reqs/s | Seqs (#): 65 running (65 decoding, 0 prefilling, avg seq len 1104.00), 0 queued | KV Cache Usage: 19.92% allocated, 19.02% reserved, (38.94% total) | Per Manager Loop: Idle 51.79%, 0.15 ± 0.68 commands, 0.92 ± 0.28 steps scheduled (max 2) | Early Stopping: 0.28 ± 0.30 (buffer size 1919, warmup_done=True) | Reporting Interval: 5.02s, 203 forward passes, 32 finished seqs, 32 finished reqs | Lifetime Counters: 8.81K forward passes, 114.87K prefill tokens, 501.47K decode tokens, 1.92K finished seqs, 1.92K finished reqs
+INFO:     127.0.0.1:39256 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:34:41,231 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=27] Responses received
+2026-04-15 16:34:41,280 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=27] Batch chat completed in 27.19 seconds
+2026-04-15 16:34:41,281 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=27] Round 0: Bot B response generation took 27.18753433227539 seconds
+2026-04-15 16:34:41,292 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=27] Conversion to training examples took 0.011250019073486328 seconds
+2026-04-15 16:34:41,293 - cartridges.synthesize [rank=0] - INFO - Batch 27 completed
+Processing batch 31
+tokens_in_chunk: 638, start_idx: 23493, end_idx: 24131
+2026-04-15 16:34:41,294 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=31] Prompt sampling took 0.0004181861877441406 seconds
+2026-04-15 16:34:41,294 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=31] Initialization of convos took 1.1682510375976562e-05 seconds
+2026-04-15 16:34:41,294 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=31] Sending batch chat request
+2026-04-15 16:34:41 | INFO | manager | Throughput: 2538.51 tok/s (354.34 prefill, 2184.18 decode), 62.26 tok/fwd (53.57 decode, 8.69 prefill), 40.77 fwd/s, 5.20 seqs/s, 5.20 reqs/s | Seqs (#): 71 running (71 decoding, 0 prefilling, avg seq len 1014.06), 0 queued | KV Cache Usage: 18.15% allocated, 17.52% reserved, (35.67% total) | Per Manager Loop: Idle 52.07%, 0.15 ± 0.73 commands, 0.93 ± 0.25 steps scheduled (max 1) | Early Stopping: 0.28 ± 0.30 (buffer size 1945, warmup_done=True) | Reporting Interval: 5.00s, 204 forward passes, 26 finished seqs, 26 finished reqs | Lifetime Counters: 9.01K forward passes, 116.65K prefill tokens, 512.4K decode tokens, 1.95K finished seqs, 1.95K finished reqs
+INFO:     127.0.0.1:43888 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:34:44,749 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=31] Responses received
+2026-04-15 16:34:44,750 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=31] Batch chat completed in 3.46 seconds
+2026-04-15 16:34:44,750 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=31] Round 0: Bot A response generation took 3.456026315689087 seconds
+2026-04-15 16:34:44,750 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=31] Sending batch chat request
+2026-04-15 16:34:46 | INFO | manager | Throughput: 2505.20 tok/s (265.47 prefill, 2239.73 decode), 62.99 tok/fwd (56.31 decode, 6.67 prefill), 39.77 fwd/s, 8.75 seqs/s, 8.75 reqs/s | Seqs (#): 59 running (59 decoding, 0 prefilling, avg seq len 1147.63), 0 queued | KV Cache Usage: 21.88% allocated, 14.23% reserved, (36.11% total) | Per Manager Loop: Idle 59.08%, 0.14 ± 0.48 commands, 0.89 ± 0.31 steps scheduled (max 1) | Early Stopping: 0.28 ± 0.30 (buffer size 1989, warmup_done=True) | Reporting Interval: 5.03s, 200 forward passes, 44 finished seqs, 44 finished reqs | Lifetime Counters: 9.21K forward passes, 117.98K prefill tokens, 523.66K decode tokens, 1.99K finished seqs, 1.99K finished reqs
+2026-04-15 16:34:51 | INFO | manager | Throughput: 1962.38 tok/s (0.00 prefill, 1962.38 decode), 49.00 tok/fwd (49.00 decode, 0.00 prefill), 40.05 fwd/s, 3.79 seqs/s, 3.79 reqs/s | Seqs (#): 40 running (40 decoding, 0 prefilling, avg seq len 1388.60), 0 queued | KV Cache Usage: 22.73% allocated, 9.14% reserved, (31.87% total) | Per Manager Loop: Idle 56.71%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.28 ± 0.30 (buffer size 2008, warmup_done=True) | Reporting Interval: 5.02s, 201 forward passes, 19 finished seqs, 19 finished reqs | Lifetime Counters: 9.41K forward passes, 117.98K prefill tokens, 533.51K decode tokens, 2.01K finished seqs, 2.01K finished reqs
+INFO:     127.0.0.1:59634 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:34:53,379 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=28] Responses received
+2026-04-15 16:34:53,412 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=28] Batch chat completed in 26.19 seconds
+2026-04-15 16:34:53,413 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=28] Round 0: Bot B response generation took 26.195534706115723 seconds
+2026-04-15 16:34:53,423 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=28] Conversion to training examples took 0.009848356246948242 seconds
+2026-04-15 16:34:53,424 - cartridges.synthesize [rank=0] - INFO - Batch 28 completed
+INFO:     127.0.0.1:40744 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:34:55,746 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=29] Responses received
+2026-04-15 16:34:55,784 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=29] Batch chat completed in 25.57 seconds
+2026-04-15 16:34:55,785 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=29] Round 0: Bot B response generation took 25.57160210609436 seconds
+2026-04-15 16:34:55,797 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=29] Conversion to training examples took 0.011758089065551758 seconds
+2026-04-15 16:34:55,798 - cartridges.synthesize [rank=0] - INFO - Batch 29 completed
+2026-04-15 16:34:56 | INFO | manager | Throughput: 1283.27 tok/s (0.00 prefill, 1283.27 decode), 28.30 tok/fwd (28.30 decode, 0.00 prefill), 45.35 fwd/s, 4.00 seqs/s, 4.00 reqs/s | Seqs (#): 20 running (20 decoding, 0 prefilling, avg seq len 1424.25), 0 queued | KV Cache Usage: 11.89% allocated, 4.49% reserved, (16.38% total) | Per Manager Loop: Idle 54.35%, 0.00 ± 0.00 commands, 1.00 ± 0.00 steps scheduled (max 1) | Early Stopping: 0.29 ± 0.30 (buffer size 2028, warmup_done=True) | Reporting Interval: 5.01s, 227 forward passes, 20 finished seqs, 20 finished reqs | Lifetime Counters: 9.64K forward passes, 117.98K prefill tokens, 539.93K decode tokens, 2.03K finished seqs, 2.03K finished reqs
+INFO:     127.0.0.1:40752 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:34:59,111 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=30] Responses received
+2026-04-15 16:34:59,152 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=30] Batch chat completed in 24.88 seconds
+2026-04-15 16:34:59,153 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=30] Round 0: Bot B response generation took 24.881561040878296 seconds
+2026-04-15 16:34:59,166 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=30] Conversion to training examples took 0.012356996536254883 seconds
+2026-04-15 16:34:59,167 - cartridges.synthesize [rank=0] - INFO - Batch 30 completed
+2026-04-15 16:35:01 | INFO | manager | Throughput: 612.22 tok/s (0.00 prefill, 612.22 decode), 11.58 tok/fwd (11.58 decode, 0.00 prefill), 52.85 fwd/s, 2.59 seqs/s, 2.59 reqs/s | Seqs (#): 7 running (7 decoding, 0 prefilling, avg seq len 1484.00), 0 queued | KV Cache Usage: 4.82% allocated, 1.14% reserved, (5.96% total) | Per Manager Loop: Idle 53.84%, 0.00 ± 0.00 commands, 1.01 ± 0.09 steps scheduled (max 2) | Early Stopping: 0.29 ± 0.31 (buffer size 2041, warmup_done=True) | Reporting Interval: 5.01s, 265 forward passes, 13 finished seqs, 13 finished reqs | Lifetime Counters: 9.9K forward passes, 117.98K prefill tokens, 543.0K decode tokens, 2.04K finished seqs, 2.04K finished reqs
+INFO:     127.0.0.1:43894 - "POST /custom/synchronous-batch-completions HTTP/1.1" 200 OK
+2026-04-15 16:35:06,474 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=31] Responses received
+2026-04-15 16:35:06,505 - cartridges.clients.tokasaurus [rank=0] - INFO - [batch=31] Batch chat completed in 21.75 seconds
+2026-04-15 16:35:06,506 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=31] Round 0: Bot B response generation took 21.755411386489868 seconds
+2026-04-15 16:35:06,516 - cartridges.synthesizers.self_study [rank=0] - INFO - [batch=31] Conversion to training examples took 0.009421110153198242 seconds
+2026-04-15 16:35:06,516 - cartridges.synthesize [rank=0] - INFO - Batch 31 completed
+2026-04-15 16:35:07,518 - cartridges.synthesize [rank=0] - INFO - Synthesizer cleanup completed successfully
+2026-04-15 16:35:07,576 - cartridges.synthesize [rank=0] - INFO - Generation done, starting to save 1024 rows to artifact
+2026-04-15 16:35:09,520 - cartridges.synthesize [rank=0] - INFO - Final output saved to /work/tesi_lpaladino/outputs/2026-04-15-16-30-44-synthesis/cccb0dd8-4041-4c9d-95f7-0b548d1e3f22/artifact/dataset.parquet
+
+==================================================
+SINTESI COMPLETATA
+Tempo totale: 0:04:24
+Velocità media: 0.26 secondi/campione
+Campioni totali: 1024
+==================================================
+Job completato con successo.

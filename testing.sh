@@ -31,7 +31,7 @@ nvidia-smi --query-gpu=timestamp,memory.used,memory.total,utilization.gpu --form
 MONITOR_PID=$!
 
 echo "Avvio del server Tokasaurus..."
-tksrs model=Qwen/Qwen3-4b kv_cache_num_tokens='(128 * 1024)' port=10210 &
+tksrs model=Qwen/Qwen3-4b kv_cache_num_tokens='(32 * 1024)' port=10210 &
 SERVER_PID=$!
 
 echo "Verifica disponibilità server sulla porta 10210..."

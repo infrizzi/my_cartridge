@@ -46,23 +46,42 @@ def run_test():
         
         inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
         generated_ids = inputs["input_ids"]
+        input_ids = inputs["input_ids"].squeeze(0)
+        seq_ids = torch.zeros_like(input_ids)
+        position_ids = torch.arange(len(input_ids)).to("cuda")
+
+        max_new_tokens = 256
         
         start_gen = time.time()
         with torch.no_grad():
-            for _ in range(256): # max_new_tokens
-                # Passiamo la cache direttamente al forward del modello
-                outputs = model(input_ids=generated_ids, cache=cache)
+            for i in range(max_new_tokens):
+                # CHIAMATA CORRETTA:
+                # 1. Usiamo i nomi dei parametri della classe (past_key_values invece di cache)
+                # 2. Passiamo seq_ids e position_ids che sono obbligatori
+                # 3. Impostiamo mode="generate" come previsto dalla classe Qwen3Batch
+                outputs = model(
+                    input_ids=input_ids,
+                    seq_ids=seq_ids,
+                    position_ids=position_ids,
+                    past_key_values=cache,
+                    mode="generate"
+                )
                 
-                # Prendiamo i logits dell'ultimo token generato
+                # Prendiamo i logits dell'ULTIMO token
                 next_token_logits = outputs.logits[:, -1, :]
-                
-                # Greedy Decoding: prendiamo il token con probabilità massima
                 next_token = torch.argmax(next_token_logits, dim=-1).unsqueeze(-1)
                 
-                # Concateniamo il nuovo token alla sequenza
+                # Aggiorniamo la sequenza totale per la decodifica finale
                 generated_ids = torch.cat([generated_ids, next_token], dim=-1)
-                
-                # Controllo fine della generazione (EOS token)
+
+                # --- LOGICA KV-CACHE ---
+                # Per il passo successivo, passiamo SOLO l'ultimo token generato.
+                # La cache (past_key_values) tiene già a mente tutto il passato.
+                input_ids = next_token.squeeze(0)
+                seq_ids = torch.zeros_like(input_ids)
+                # La posizione del nuovo token è la lunghezza attuale della sequenza
+                position_ids = torch.tensor([len(generated_ids[0]) - 1]).to("cuda")
+
                 if next_token.item() == tokenizer.eos_token_id:
                     break
         duration = time.time() - start_gen

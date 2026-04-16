@@ -36,17 +36,17 @@ if __name__ == "__main__":
         dataset=TrainDataset.Config(
             data_sources=[DataSource(path=TRAIN_PATH, type="local")],
             top_k_logits=20,
-            packed_seq_length=2048,
+            packed_seq_length=1024,
             packing_mode="truncate",
         ),
 
         # --- SEZIONE EVALUATION --- 
-        loss_eval_every_n_steps=100,
+        loss_eval_every_n_steps=50,
         loss_evals=[
             LossEvalConfig(
                 dataset=LossEvalDataset.Config(
                     data_source=DataSource(path=EVAL_PATH, type="local"),
-                    packed_seq_length=2048,
+                    packed_seq_length=1024,
                 ),
                 name_for_wandb="oppenheimer_loss_eval",
             )

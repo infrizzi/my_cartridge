@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=testQwen3VL
-#SBATCH --output=logs/infer_%j.out
-#SBATCH --error=logs/infer_%j.err
+#SBATCH --job-name=selfstudyCart
+#SBATCH --output=logs/selfstudy_%j.out
+#SBATCH --error=logs/selfstudy_%j.err
 #SBATCH --account=tesi_lpaladino
 #SBATCH --partition=boost_usr_prod
 #SBATCH --gres=gpu:1

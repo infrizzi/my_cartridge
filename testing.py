@@ -45,22 +45,29 @@ def run_test():
         print("-" * 30)
         
         inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
+        generated_ids = inputs["input_ids"]
         
         start_gen = time.time()
         with torch.no_grad():
-            # Utilizziamo la cache del Cartridge durante la generazione
-            output = model.generate(
-                **inputs,
-                cache=cache,
-                use_cache=True,
-                max_new_tokens=256,
-                temperature=0.4,
-                do_sample=True,
-                pad_token_id=tokenizer.pad_token_id
-            )
+            for _ in range(256): # max_new_tokens
+                # Passiamo la cache direttamente al forward del modello
+                outputs = model(input_ids=generated_ids, cache=cache)
+                
+                # Prendiamo i logits dell'ultimo token generato
+                next_token_logits = outputs.logits[:, -1, :]
+                
+                # Greedy Decoding: prendiamo il token con probabilità massima
+                next_token = torch.argmax(next_token_logits, dim=-1).unsqueeze(-1)
+                
+                # Concateniamo il nuovo token alla sequenza
+                generated_ids = torch.cat([generated_ids, next_token], dim=-1)
+                
+                # Controllo fine della generazione (EOS token)
+                if next_token.item() == tokenizer.eos_token_id:
+                    break
         duration = time.time() - start_gen
         
-        risposta = tokenizer.decode(output[0], skip_special_tokens=True)
+        risposta = tokenizer.decode(generated_ids[0], skip_special_tokens=True)
         # Rimuoviamo il prompt dalla risposta per pulizia
         risposta_pulita = risposta[len(prompt):].strip()
         

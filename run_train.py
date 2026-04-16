@@ -2,8 +2,8 @@ import torch
 import time
 from datetime import timedelta
 from cartridges.models import HFModelConfig, FlexQwen3ForCausalLM
-from cartridges.train import TrainConfig, LossEvalConfig
-from cartridges.datasets import TrainDataset, DataSource, LossEvalDataset
+from cartridges.train import TrainConfig, GenerationEvalConfig, LossEvalConfig
+from cartridges.datasets import TrainDataset, DataSource, GenerateEvalDataset, LossEvalDataset
 from cartridges.initialization.random import KVFromRandomVectors
 import pydrantic
 
@@ -52,8 +52,20 @@ if __name__ == "__main__":
             )
         ],
 
+        generate_eval_every_n_steps=100,
+        generate_evals=[
+            GenerationEvalConfig(
+                dataset=GenerateEvalDataset.Config(
+                    data_source=DataSource(path=EVAL_PATH, type="local"),
+                ),
+                num_samples=1,
+                temperature=0.3, # Risposte più deterministiche
+                name_for_wandb="oppenheimer_generation_test",
+            )
+        ],
+
         save_every_n_steps=200,
-        name="oppenheimer-distilled-v2",
+        name="oppenheimer-distilled-v3",
         output_dir="/work/tesi_lpaladino/outputs/checkpoints",
     )
 

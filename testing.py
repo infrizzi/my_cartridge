@@ -1,5 +1,7 @@
 import requests
 import json
+import time
+from datetime import timedelta
 
 # URL del server Tokasaurus (porta standard 10210)
 URL = "http://127.0.0.1:10210/v1/cartridge/chat/completions"
@@ -20,10 +22,12 @@ def ask_cartridge(prompt):
         }]
     }
     
+    start_req = time.time()
     try:
         response = requests.post(URL, json=payload)
         response.raise_for_status()
-        return response.json()['choices'][0]['message']['content']
+        end_req = time.time()
+        return response.json()['choices'][0]['message']['content'], end_req - start_req
     except Exception as e:
         return f"Errore durante la richiesta: {e}"
 
@@ -33,10 +37,16 @@ if __name__ == "__main__":
         "Spiegami l'importanza del test Trinity descritto nel film.",
         "Cosa rappresenta la scena finale tra Oppenheimer ed Einstein vicino al laghetto?"
     ]
+    start_total = time.time()
 
     print("\n--- TEST DEL CARTRIDGE OPPENHEIMER ---")
     for i, p in enumerate(test_prompts, 1):
         print(f"\n[Test {i}] Domanda: {p}")
         print("-" * 30)
-        risposta = ask_cartridge(p)
+        risposta, durata = ask_cartridge(p)
         print(f"Risposta: {risposta}\n")
+        print(f"Tempo di risposta: {durata:.2f} secondi")
+
+    end_total = time.time()
+    total_duration = str(timedelta(seconds=int(end_total - start_total)))
+    print(f"Tempo totale di esecuzione test: {total_duration}")

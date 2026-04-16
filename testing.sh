@@ -26,6 +26,10 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 # Logs dir
 mkdir -p logs
 
+# Monitor VRAM
+nvidia-smi --query-gpu=timestamp,memory.used,memory.total,utilization.gpu --format=csv > logs/gpu_test_stats_${SLURM_JOB_ID}.csv &
+MONITOR_PID=$!
+
 echo "Avvio del server Tokasaurus..."
 tksrs model=Qwen/Qwen3-4b kv_cache_num_tokens='(128 * 1024)' port=10210 &
 SERVER_PID=$!
@@ -43,3 +47,4 @@ python test_cartridge.py
 # Pulizia: uccidiamo il server alla fine del test
 echo "Test concluso. Arresto del server (PID: $SERVER_PID)..."
 kill $SERVER_PID
+kill $MONITOR_PID

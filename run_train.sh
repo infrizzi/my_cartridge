@@ -9,7 +9,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=64G
 #SBATCH --time=4:00:00
-#SBATCH --constraint=gpu_A40_45G|gpu_L40S_45G|gpu_A5000_24G
+#SBATCH --constraint=gpu_A40_45G|gpu_L40S_45G|gpu_RTX6000_24G|gpu_RTX_A5000_24G
 
 # Modules
 module unload python/3.11.11-gcc-11.4.0

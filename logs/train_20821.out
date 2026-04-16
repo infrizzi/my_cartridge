@@ -1,0 +1,35 @@
+Unloading python/3.11.11-gcc-11.4.0
+  Unloading useless requirement: util-linux-uuid/2.41-gcc-11.4.0
+    sqlite/3.46.0-gcc-11.4.0 libffi/3.4.8-gcc-11.4.0
+Inizio della fase di Training/Distillazione...
+Utilizzo del dataset generato per Oppenheimer.
+--- Inizio Job: Thu Apr 16 12:17:05 2026 | VRAM Iniziale: 0.00 GB ---
+Running 1 configs
+2026-04-16 12:17:06,546 - cartridges.train [rank=0] - INFO - Global batch size: 32
+2026-04-16 12:17:06,547 - cartridges.train [rank=0] - INFO - Num devices: 1
+2026-04-16 12:17:06,547 - cartridges.train [rank=0] - INFO - Train outputs will be saved to /work/tesi_lpaladino/outputs/checkpoints/2026-04-16-12-17-06-run_train/7a509d1c-1fb0-452c-af6f-124eff61d19b
+2026-04-16 12:17:11,619 - cartridges.train [rank=0] - INFO - Fininshed loading training dataset from disk, took 3.14s
+2026-04-16 12:17:11,948 - cartridges.train [rank=0] - INFO - Finished loading eval and generate datasets from disk, took 3.5s
+2026-04-16 12:17:28,698 - cartridges.train [rank=0] - INFO - Using custom prefix tuning (TrainableCache)
+2026-04-16 12:17:38,821 - cartridges.cache [rank=0] - INFO - num_trainable_tokens: 924
+2026-04-16 12:17:38,822 - cartridges.cache [rank=0] - INFO - num_frozen_tokens: 100
+2026-04-16 12:17:38,822 - cartridges.train [rank=0] - INFO - Done loading trainable cache, time: 10.12s
+2026-04-16 12:17:38,864 - cartridges.train [rank=0] - INFO - Starting training
+2026-04-16 12:18:00,727 - cartridges.train [rank=0] - INFO - Setup wandb with model stats: {'num_model_params': 4097965568, 'num_trainable_params': 68124672, 'num_trainable_tokens': 924, 'cache_trainable_params': 68124672}
+2026-04-16 12:18:00,855 - cartridges.train [rank=0] - INFO - Dataloader length: 351
+2026-04-16 12:18:01,168 - cartridges.train [rank=0] - INFO - Evaluating `oppenheimer_loss_eval` (n=73, 73 per device, world size=1)
+2026-04-16 12:19:47,830 - cartridges.train [rank=0] - INFO - Eval loss - 2.3437609672546387 
+2026-04-16 12:19:47,903 - cartridges.train [rank=0] - INFO - done evaling - oppenheimer_loss_eval
+2026-04-16 12:19:47,969 - cartridges.train [rank=0] - INFO - Generating `oppenheimer_generation_test` (n=103, 103 per device)
+2026-04-16 12:19:47,970 - cartridges.train [rank=0] - INFO - Generating sample 0 of 1
+2026-04-16 12:20:21,718 - cartridges.train [rank=0] - INFO - Generating sample 0 of 1
+2026-04-16 12:20:25,042 - cartridges.train [rank=0] - INFO - Generating sample 0 of 1
+
+--- Job Terminato ---
+Tempo totale impiegato: 0:04:06
+VRAM finale occupata: 15.77 GB
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /homes/lpaladino/cartridges/wandb/offline-run-20260416_121741-f61uls0r[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20260416_121741-f61uls0r/logs[0m
+Job di training completato con successo.

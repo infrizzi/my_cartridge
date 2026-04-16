@@ -1,0 +1,458 @@
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:05<00:11,  5.59s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:10<00:05,  5.48s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:11<00:00,  3.03s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:11<00:00,  3.70s/it]
+wandb: Tracking run with wandb version 0.26.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /homes/lpaladino/cartridges/wandb/offline-run-20260416_121741-f61uls0r
+Epoch 1:   0%|          | 0/351 [00:00<?, ?it/s]
+Evaluation [step=0] (oppenheimer_loss_eval):   0%|          | 0/73 [00:00<?, ?it/s][AE0416 12:19:37.046000 991778 torch/_inductor/select_algorithm.py:1477] [0/0] Exception out of resource: shared memory, Required: 102432, Hardware limit: 101376. Reducing block sizes or `num_stages` may help. for benchmark choice TritonTemplateCaller(/tmp/torchinductor_lpaladino/bv/cbvss5lzjozvxxfmy5kp46pxv663a4ein3fervdbogneackukmks.py, BLOCKS_ARE_CONTIGUOUS=False, BLOCK_M=128, BLOCK_N=64, FLOAT32_PRECISION="'ieee'", GQA_SHARED_HEADS=4, HAS_FULL_BLOCKS=True, IS_DIVISIBLE=True, OUTPUT_LOGSUMEXP=False, PRESCALE_QK=False, QK_HEAD_DIM=128, ROWS_GUARANTEED_SAFE=False, SM_SCALE=0.08838834764831845, SPARSE_KV_BLOCK_SIZE=128, SPARSE_Q_BLOCK_SIZE=128, V_HEAD_DIM=128, num_stages=3, num_warps=4)
+E0416 12:19:37.753000 991778 torch/_inductor/select_algorithm.py:1477] [0/0] Exception out of resource: shared memory, Required: 163840, Hardware limit: 101376. Reducing block sizes or `num_stages` may help. for benchmark choice TritonTemplateCaller(/tmp/torchinductor_lpaladino/tb/ctb2mt7txoosxiigj2qwabff2mvyc2rnwk3fz6cvh3467i24pqze.py, BLOCKS_ARE_CONTIGUOUS=False, BLOCK_M=64, BLOCK_N=128, FLOAT32_PRECISION="'ieee'", GQA_SHARED_HEADS=4, HAS_FULL_BLOCKS=True, IS_DIVISIBLE=True, OUTPUT_LOGSUMEXP=False, PRESCALE_QK=False, QK_HEAD_DIM=128, ROWS_GUARANTEED_SAFE=False, SM_SCALE=0.08838834764831845, SPARSE_KV_BLOCK_SIZE=128, SPARSE_Q_BLOCK_SIZE=128, V_HEAD_DIM=128, num_stages=3, num_warps=4)
+E0416 12:19:37.954000 991778 torch/_inductor/select_algorithm.py:1477] [0/0] Exception out of resource: shared memory, Required: 167968, Hardware limit: 101376. Reducing block sizes or `num_stages` may help. for benchmark choice TritonTemplateCaller(/tmp/torchinductor_lpaladino/dr/cdrw3ehddhpimhlyk644garqfbbqzluhcambybm7k6uauhukcko7.py, BLOCKS_ARE_CONTIGUOUS=False, BLOCK_M=128, BLOCK_N=128, FLOAT32_PRECISION="'ieee'", GQA_SHARED_HEADS=4, HAS_FULL_BLOCKS=True, IS_DIVISIBLE=True, OUTPUT_LOGSUMEXP=False, PRESCALE_QK=False, QK_HEAD_DIM=128, ROWS_GUARANTEED_SAFE=False, SM_SCALE=0.08838834764831845, SPARSE_KV_BLOCK_SIZE=128, SPARSE_Q_BLOCK_SIZE=128, V_HEAD_DIM=128, num_stages=3, num_warps=4)
+W0416 12:19:38.484000 991778 torch/_inductor/select_algorithm.py:1696] [0/0] out of resource: shared memory, Required: 102432, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+W0416 12:19:38.514000 991778 torch/_inductor/select_algorithm.py:1696] [0/0] out of resource: shared memory, Required: 167968, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+W0416 12:19:38.541000 991778 torch/_inductor/select_algorithm.py:1696] [0/0] out of resource: shared memory, Required: 163840, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+AUTOTUNE flex_attention(1x32x1024x128, 1x8x2048x128, 1x8x2048x128, 1x32x1024, 1x1x8, 1x1x8x16, 1x1x8, 1x1x8x16, 2048, 1024)
+  triton_flex_attention_0 0.3697 ms 100.0% BLOCKS_ARE_CONTIGUOUS=False, BLOCK_M=128, BLOCK_N=64, FLOAT32_PRECISION="'ieee'", GQA_SHARED_HEADS=4, HAS_FULL_BLOCKS=True, IS_DIVISIBLE=True, OUTPUT_LOGSUMEXP=False, PRESCALE_QK=False, QK_HEAD_DIM=128, ROWS_GUARANTEED_SAFE=False, SM_SCALE=0.08838834764831845, SPARSE_KV_BLOCK_SIZE=128, SPARSE_Q_BLOCK_SIZE=128, V_HEAD_DIM=128, num_stages=3, num_warps=8
+  triton_flex_attention_4 0.4762 ms 77.6% BLOCKS_ARE_CONTIGUOUS=False, BLOCK_M=64, BLOCK_N=64, FLOAT32_PRECISION="'ieee'", GQA_SHARED_HEADS=4, HAS_FULL_BLOCKS=True, IS_DIVISIBLE=True, OUTPUT_LOGSUMEXP=False, PRESCALE_QK=False, QK_HEAD_DIM=128, ROWS_GUARANTEED_SAFE=False, SM_SCALE=0.08838834764831845, SPARSE_KV_BLOCK_SIZE=128, SPARSE_Q_BLOCK_SIZE=128, V_HEAD_DIM=128, num_stages=3, num_warps=4
+  triton_flex_attention_1 inf ms 0.0% BLOCKS_ARE_CONTIGUOUS=False, BLOCK_M=128, BLOCK_N=64, FLOAT32_PRECISION="'ieee'", GQA_SHARED_HEADS=4, HAS_FULL_BLOCKS=True, IS_DIVISIBLE=True, OUTPUT_LOGSUMEXP=False, PRESCALE_QK=False, QK_HEAD_DIM=128, ROWS_GUARANTEED_SAFE=False, SM_SCALE=0.08838834764831845, SPARSE_KV_BLOCK_SIZE=128, SPARSE_Q_BLOCK_SIZE=128, V_HEAD_DIM=128, num_stages=3, num_warps=4
+  triton_flex_attention_2 inf ms 0.0% BLOCKS_ARE_CONTIGUOUS=False, BLOCK_M=128, BLOCK_N=128, FLOAT32_PRECISION="'ieee'", GQA_SHARED_HEADS=4, HAS_FULL_BLOCKS=True, IS_DIVISIBLE=True, OUTPUT_LOGSUMEXP=False, PRESCALE_QK=False, QK_HEAD_DIM=128, ROWS_GUARANTEED_SAFE=False, SM_SCALE=0.08838834764831845, SPARSE_KV_BLOCK_SIZE=128, SPARSE_Q_BLOCK_SIZE=128, V_HEAD_DIM=128, num_stages=3, num_warps=4
+  triton_flex_attention_3 inf ms 0.0% BLOCKS_ARE_CONTIGUOUS=False, BLOCK_M=64, BLOCK_N=128, FLOAT32_PRECISION="'ieee'", GQA_SHARED_HEADS=4, HAS_FULL_BLOCKS=True, IS_DIVISIBLE=True, OUTPUT_LOGSUMEXP=False, PRESCALE_QK=False, QK_HEAD_DIM=128, ROWS_GUARANTEED_SAFE=False, SM_SCALE=0.08838834764831845, SPARSE_KV_BLOCK_SIZE=128, SPARSE_Q_BLOCK_SIZE=128, V_HEAD_DIM=128, num_stages=3, num_warps=4
+SingleProcess AUTOTUNE benchmarking takes 0.7208 seconds and 15.5459 seconds precompiling for 5 choices
+
+Evaluation [step=0] (oppenheimer_loss_eval):   1%|▏         | 1/73 [01:40<2:01:08, 100.95s/it][A
+Evaluation [step=0] (oppenheimer_loss_eval):   4%|▍         | 3/73 [01:41<30:36, 26.24s/it]   [A
+Evaluation [step=0] (oppenheimer_loss_eval):   7%|▋         | 5/73 [01:41<14:29, 12.79s/it][A
+Evaluation [step=0] (oppenheimer_loss_eval):  10%|▉         | 7/73 [01:41<08:08,  7.40s/it][A
+Evaluation [step=0] (oppenheimer_loss_eval):  12%|█▏        | 9/73 [01:41<04:57,  4.64s/it][A
+Evaluation [step=0] (oppenheimer_loss_eval):  15%|█▌        | 11/73 [01:41<03:08,  3.04s/it][A
+Evaluation [step=0] (oppenheimer_loss_eval):  18%|█▊        | 13/73 [01:41<02:03,  2.05s/it][A
+Evaluation [step=0] (oppenheimer_loss_eval):  21%|██        | 15/73 [01:42<01:22,  1.42s/it][A
+Evaluation [step=0] (oppenheimer_loss_eval):  23%|██▎       | 17/73 [01:42<00:55,  1.01it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  26%|██▌       | 19/73 [01:42<00:38,  1.41it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  29%|██▉       | 21/73 [01:42<00:26,  1.95it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  32%|███▏      | 23/73 [01:42<00:19,  2.63it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  34%|███▍      | 25/73 [01:42<00:13,  3.47it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  37%|███▋      | 27/73 [01:42<00:10,  4.47it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  40%|███▉      | 29/73 [01:43<00:07,  5.58it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  42%|████▏     | 31/73 [01:43<00:06,  6.75it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  45%|████▌     | 33/73 [01:43<00:05,  7.92it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  48%|████▊     | 35/73 [01:43<00:04,  8.99it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  51%|█████     | 37/73 [01:43<00:03,  9.95it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  53%|█████▎    | 39/73 [01:43<00:03, 10.74it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  56%|█████▌    | 41/73 [01:44<00:02, 11.38it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  59%|█████▉    | 43/73 [01:44<00:02, 11.87it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  62%|██████▏   | 45/73 [01:44<00:02, 12.19it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  64%|██████▍   | 47/73 [01:44<00:02, 12.48it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  67%|██████▋   | 49/73 [01:44<00:01, 12.67it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  70%|██████▉   | 51/73 [01:44<00:01, 12.82it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  73%|███████▎  | 53/73 [01:44<00:01, 12.94it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  75%|███████▌  | 55/73 [01:45<00:01, 12.94it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  78%|███████▊  | 57/73 [01:45<00:01, 12.97it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  81%|████████  | 59/73 [01:45<00:01, 13.02it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  84%|████████▎ | 61/73 [01:45<00:00, 13.01it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  86%|████████▋ | 63/73 [01:45<00:00, 13.07it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  89%|████████▉ | 65/73 [01:45<00:00, 13.10it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  92%|█████████▏| 67/73 [01:45<00:00, 13.29it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  95%|█████████▍| 69/73 [01:46<00:00, 13.47it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval):  97%|█████████▋| 71/73 [01:46<00:00, 13.60it/s][A
+Evaluation [step=0] (oppenheimer_loss_eval): 100%|██████████| 73/73 [01:46<00:00, 13.74it/s][A
+                                                                                            [A
+Generating [step=0] (oppenheimer_generation_test):   0%|          | 0/103 [00:00<?, ?it/s][A
+
+Generating:   0%|          | 0/128 [00:00<?, ?it/s][A[A
+
+Generating:   1%|          | 1/128 [00:21<45:23, 21.44s/it][A[A
+
+Generating:   2%|▏         | 2/128 [00:27<26:28, 12.61s/it][A[A
+
+Generating:   3%|▎         | 4/128 [00:27<09:47,  4.74s/it][A[A
+
+Generating:   5%|▍         | 6/128 [00:28<05:07,  2.52s/it][A[A
+
+Generating:   6%|▋         | 8/128 [00:28<03:03,  1.53s/it][A[A
+
+Generating:   8%|▊         | 10/128 [00:28<01:56,  1.01it/s][A[A
+
+Generating:   9%|▉         | 12/128 [00:28<01:17,  1.50it/s][A[A
+
+Generating:  11%|█         | 14/128 [00:28<00:52,  2.16it/s][A[A
+
+Generating:  12%|█▎        | 16/128 [00:28<00:37,  3.01it/s][A[A
+
+Generating:  14%|█▍        | 18/128 [00:28<00:26,  4.10it/s][A[A
+
+Generating:  16%|█▌        | 20/128 [00:28<00:19,  5.43it/s][A[A
+
+Generating:  17%|█▋        | 22/128 [00:28<00:15,  6.98it/s][A[A
+
+Generating:  19%|█▉        | 24/128 [00:28<00:11,  8.68it/s][A[A
+
+Generating:  20%|██        | 26/128 [00:29<00:09, 10.44it/s][A[A
+
+Generating:  22%|██▏       | 28/128 [00:29<00:08, 12.17it/s][A[A
+
+Generating:  23%|██▎       | 30/128 [00:29<00:07, 13.76it/s][A[A
+
+Generating:  25%|██▌       | 32/128 [00:29<00:06, 15.13it/s][A[A
+
+Generating:  27%|██▋       | 34/128 [00:29<00:05, 16.27it/s][A[A
+
+Generating:  28%|██▊       | 36/128 [00:29<00:05, 17.16it/s][A[A
+
+Generating:  30%|██▉       | 38/128 [00:29<00:05, 17.85it/s][A[A
+
+Generating:  31%|███▏      | 40/128 [00:29<00:04, 18.39it/s][A[A
+
+Generating:  33%|███▎      | 42/128 [00:29<00:04, 18.77it/s][A[A
+
+Generating:  34%|███▍      | 44/128 [00:30<00:04, 19.04it/s][A[A
+
+Generating:  36%|███▌      | 46/128 [00:30<00:04, 19.26it/s][A[A
+
+Generating:  38%|███▊      | 48/128 [00:30<00:04, 19.44it/s][A[A
+
+Generating:  39%|███▉      | 50/128 [00:30<00:03, 19.53it/s][A[A
+
+Generating:  41%|████      | 52/128 [00:30<00:03, 19.58it/s][A[A
+
+Generating:  42%|████▏     | 54/128 [00:30<00:03, 19.61it/s][A[A
+
+Generating:  44%|████▍     | 56/128 [00:30<00:03, 19.65it/s][A[A
+
+Generating:  45%|████▌     | 58/128 [00:30<00:03, 19.69it/s][A[A
+
+Generating:  47%|████▋     | 60/128 [00:30<00:03, 19.71it/s][A[A
+
+Generating:  48%|████▊     | 62/128 [00:30<00:03, 19.70it/s][A[A
+
+Generating:  50%|█████     | 64/128 [00:31<00:03, 19.72it/s][A[A
+
+Generating:  52%|█████▏    | 66/128 [00:31<00:03, 19.76it/s][A[A
+
+Generating:  53%|█████▎    | 68/128 [00:31<00:03, 19.76it/s][A[A
+
+Generating:  55%|█████▍    | 70/128 [00:31<00:02, 19.77it/s][A[A
+
+Generating:  56%|█████▋    | 72/128 [00:31<00:02, 19.77it/s][A[A
+
+Generating:  58%|█████▊    | 74/128 [00:31<00:02, 19.79it/s][A[A
+
+Generating:  59%|█████▉    | 76/128 [00:31<00:02, 19.81it/s][A[A
+
+Generating:  61%|██████    | 78/128 [00:31<00:02, 19.80it/s][A[A
+
+Generating:  62%|██████▎   | 80/128 [00:31<00:02, 19.77it/s][A[A
+
+Generating:  64%|██████▍   | 82/128 [00:31<00:02, 19.79it/s][A[A
+
+Generating:  66%|██████▌   | 84/128 [00:32<00:02, 19.81it/s][A[A
+
+Generating:  67%|██████▋   | 86/128 [00:32<00:02, 19.80it/s][A[A
+
+Generating:  69%|██████▉   | 88/128 [00:32<00:02, 19.78it/s][A[A
+
+Generating:  70%|███████   | 90/128 [00:32<00:01, 19.78it/s][A[A
+
+Generating:  72%|███████▏  | 92/128 [00:32<00:01, 19.76it/s][A[A
+
+Generating:  73%|███████▎  | 94/128 [00:32<00:01, 19.80it/s][A[A
+
+Generating:  75%|███████▌  | 96/128 [00:32<00:01, 19.75it/s][A[A
+
+Generating:  77%|███████▋  | 98/128 [00:32<00:01, 19.73it/s][A[A
+
+Generating:  78%|███████▊  | 100/128 [00:32<00:01, 19.74it/s][A[A
+
+Generating:  80%|███████▉  | 102/128 [00:32<00:01, 19.75it/s][A[A
+
+Generating:  81%|████████▏ | 104/128 [00:33<00:01, 19.73it/s][A[A
+
+Generating:  84%|████████▎ | 107/128 [00:33<00:00, 22.42it/s][A[A
+
+Generating:  87%|████████▋ | 111/128 [00:33<00:00, 27.26it/s][A[A
+
+Generating:  90%|████████▉ | 115/128 [00:33<00:00, 30.77it/s][A[A
+
+Generating:  93%|█████████▎| 119/128 [00:33<00:00, 33.22it/s][A[A
+
+Generating:  96%|█████████▌| 123/128 [00:33<00:00, 34.94it/s][A[A
+
+Generating:  99%|█████████▉| 127/128 [00:33<00:00, 36.10it/s][A[A
+
+                                                             [A[A
+Generating [step=0] (oppenheimer_generation_test):   1%|          | 1/103 [00:33<57:22, 33.75s/it][A
+
+Generating:   0%|          | 0/128 [00:00<?, ?it/s][A[A
+
+Generating:   2%|▏         | 3/128 [00:00<00:04, 29.82it/s][A[A
+
+Generating:   5%|▌         | 7/128 [00:00<00:03, 35.23it/s][A[A
+
+Generating:   9%|▊         | 11/128 [00:00<00:03, 36.93it/s][A[A
+
+Generating:  12%|█▏        | 15/128 [00:00<00:02, 37.75it/s][A[A
+
+Generating:  15%|█▍        | 19/128 [00:00<00:02, 38.33it/s][A[A
+
+Generating:  18%|█▊        | 23/128 [00:00<00:02, 38.51it/s][A[A
+
+Generating:  21%|██        | 27/128 [00:00<00:02, 38.55it/s][A[A
+
+Generating:  24%|██▍       | 31/128 [00:00<00:02, 38.70it/s][A[A
+
+Generating:  27%|██▋       | 35/128 [00:00<00:02, 38.71it/s][A[A
+
+Generating:  30%|███       | 39/128 [00:01<00:02, 38.65it/s][A[A
+
+Generating:  34%|███▎      | 43/128 [00:01<00:02, 38.66it/s][A[A
+
+Generating:  37%|███▋      | 47/128 [00:01<00:02, 38.70it/s][A[A
+
+Generating:  40%|███▉      | 51/128 [00:01<00:01, 38.75it/s][A[A
+
+Generating:  43%|████▎     | 55/128 [00:01<00:01, 38.86it/s][A[A
+
+Generating:  46%|████▌     | 59/128 [00:01<00:01, 38.82it/s][A[A
+
+Generating:  49%|████▉     | 63/128 [00:01<00:01, 38.77it/s][A[A
+
+Generating:  52%|█████▏    | 67/128 [00:01<00:01, 38.77it/s][A[A
+
+Generating:  55%|█████▌    | 71/128 [00:01<00:01, 38.79it/s][A[A
+
+Generating:  59%|█████▊    | 75/128 [00:01<00:01, 38.82it/s][A[A
+
+Generating:  62%|██████▏   | 79/128 [00:02<00:01, 38.89it/s][A[A
+
+Generating:  65%|██████▍   | 83/128 [00:02<00:01, 38.78it/s][A[A
+
+Generating:  68%|██████▊   | 87/128 [00:02<00:01, 38.71it/s][A[A
+
+Generating:  71%|███████   | 91/128 [00:02<00:00, 38.79it/s][A[A
+
+Generating:  74%|███████▍  | 95/128 [00:02<00:00, 38.80it/s][A[A
+
+Generating:  77%|███████▋  | 99/128 [00:02<00:00, 38.82it/s][A[A
+
+Generating:  80%|████████  | 103/128 [00:02<00:00, 38.60it/s][A[A
+
+Generating:  84%|████████▎ | 107/128 [00:02<00:00, 38.61it/s][A[A
+
+Generating:  87%|████████▋ | 111/128 [00:02<00:00, 38.74it/s][A[A
+
+Generating:  90%|████████▉ | 115/128 [00:02<00:00, 38.78it/s][A[A
+
+Generating:  93%|█████████▎| 119/128 [00:03<00:00, 38.81it/s][A[A
+
+Generating:  96%|█████████▌| 123/128 [00:03<00:00, 38.80it/s][A[A
+
+Generating:  99%|█████████▉| 127/128 [00:03<00:00, 38.88it/s][A[A
+
+                                                             [A[A
+Generating [step=0] (oppenheimer_generation_test):   2%|▏         | 2/103 [00:37<26:41, 15.85s/it][A
+
+Generating:   0%|          | 0/128 [00:00<?, ?it/s][A[A
+
+                                                   [A[A
+                                                                                                  [A                                                Traceback (most recent call last):
+  File "/homes/lpaladino/cartridges/run_train.py", line 74, in <module>
+    pydrantic.main([config])
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/pydrantic/cli.py", line 106, in main
+    out = config.run()
+          ^^^^^^^^^^^^
+  File "/homes/lpaladino/cartridges/cartridges/train.py", line 118, in run
+    return train(self)
+           ^^^^^^^^^^^
+  File "/homes/lpaladino/cartridges/cartridges/train.py", line 360, in train
+    do_evaluate_generations(step=iter_idx)
+  File "/homes/lpaladino/cartridges/cartridges/train.py", line 312, in do_evaluate_generations
+    evaluate_generations(
+  File "/homes/lpaladino/cartridges/cartridges/train.py", line 718, in evaluate_generations
+    pred_ids: Dict[int, List[int]] = flex_generate(
+                                     ^^^^^^^^^^^^^^
+  File "/homes/lpaladino/cartridges/cartridges/generation.py", line 69, in flex_generate
+    outputs = model(
+              ^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/homes/lpaladino/cartridges/cartridges/models/qwen/modeling_qwen3.py", line 466, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+                                       ^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/homes/lpaladino/cartridges/cartridges/models/qwen/modeling_qwen3.py", line 384, in forward
+    batch = decoder_layer(batch)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/transformers/modeling_layers.py", line 83, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/homes/lpaladino/cartridges/cartridges/models/qwen/modeling_qwen3.py", line 222, in forward
+    batch = self.self_attn(batch)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/homes/lpaladino/cartridges/cartridges/models/qwen/modeling_qwen3.py", line 186, in forward
+    attn_output = flex_attention_forward(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/homes/lpaladino/cartridges/cartridges/models/attention.py", line 98, in flex_attention_forward
+    attn_output = attn(
+                  ^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 574, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/convert_frame.py", line 1380, in __call__
+    return self._torchdynamo_orig_callable(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/convert_frame.py", line 1164, in __call__
+    result = self._inner_convert(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/convert_frame.py", line 547, in __call__
+    return _compile(
+           ^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/convert_frame.py", line 986, in _compile
+    guarded_code = compile_inner(code, one_graph, hooks, transform)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/convert_frame.py", line 715, in compile_inner
+    return _compile_inner(code, one_graph, hooks, transform)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_utils_internal.py", line 95, in wrapper_function
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/convert_frame.py", line 750, in _compile_inner
+    out_code = transform_code_object(code, transform)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/bytecode_transformation.py", line 1361, in transform_code_object
+    transformations(instructions, code_options)
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/convert_frame.py", line 231, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/convert_frame.py", line 662, in transform
+    tracer.run()
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/symbolic_convert.py", line 2868, in run
+    super().run()
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/symbolic_convert.py", line 1052, in run
+    while self.step():
+          ^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/symbolic_convert.py", line 962, in step
+    self.dispatch_table[inst.opcode](self, inst)
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/symbolic_convert.py", line 3048, in RETURN_VALUE
+    self._return(inst)
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/symbolic_convert.py", line 3033, in _return
+    self.output.compile_subgraph(
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/output_graph.py", line 1101, in compile_subgraph
+    self.compile_and_call_fx_graph(
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/output_graph.py", line 1382, in compile_and_call_fx_graph
+    compiled_fn = self.call_user_compiler(gm)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/output_graph.py", line 1432, in call_user_compiler
+    return self._call_user_compiler(gm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/output_graph.py", line 1483, in _call_user_compiler
+    raise BackendCompilerFailed(self.compiler_fn, e).with_traceback(
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/output_graph.py", line 1462, in _call_user_compiler
+    compiled_fn = compiler_fn(gm, self.example_inputs())
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/repro/after_dynamo.py", line 130, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/__init__.py", line 2340, in __call__
+    return compile_fx(model_, inputs_, config_patches=self.config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 1863, in compile_fx
+    return aot_autograd(
+           ^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/backends/common.py", line 83, in __call__
+    cg = aot_module_simplified(gm, example_inputs, **self.kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_functorch/aot_autograd.py", line 1155, in aot_module_simplified
+    compiled_fn = dispatch_and_compile()
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_functorch/aot_autograd.py", line 1131, in dispatch_and_compile
+    compiled_fn, _ = create_aot_dispatcher_function(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_functorch/aot_autograd.py", line 580, in create_aot_dispatcher_function
+    return _create_aot_dispatcher_function(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_functorch/aot_autograd.py", line 830, in _create_aot_dispatcher_function
+    compiled_fn, fw_metadata = compiler_fn(
+                               ^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_functorch/_aot_autograd/jit_compile_runtime_wrappers.py", line 203, in aot_dispatch_base
+    compiled_fw = compiler(fw_module, updated_flat_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_functorch/aot_autograd.py", line 489, in __call__
+    return self.compiler_fn(gm, example_inputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 1741, in fw_compiler_base
+    return inner_compile(
+           ^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 569, in compile_fx_inner
+    return wrap_compiler_debug(_compile_fx_inner, compiler_name="inductor")(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_dynamo/repro/after_aot.py", line 102, in debug_wrapper
+    inner_compiled_fn = compiler_fn(gm, example_inputs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 685, in _compile_fx_inner
+    mb_compiled_graph = fx_codegen_and_compile(
+                        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 1129, in fx_codegen_and_compile
+    return scheme.codegen_and_compile(gm, example_inputs, inputs_to_check, graph_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 1044, in codegen_and_compile
+    compiled_fn = graph.compile_to_module().call
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_inductor/graph.py", line 2027, in compile_to_module
+    return self._compile_to_module()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_inductor/graph.py", line 2068, in _compile_to_module
+    mod = PyCodeCache.load_by_key_path(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_inductor/codecache.py", line 2759, in load_by_key_path
+    mod = _reload_python_module(key, path)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_inductor/runtime/compile_tasks.py", line 45, in _reload_python_module
+    exec(code, mod.__dict__, mod.__dict__)
+  File "/tmp/torchinductor_lpaladino/bl/cbldpaip5xl5d2sveqzl6tbvxc3gyngpp3sfyh7heqt3d5zfnp4k.py", line 669, in <module>
+    async_compile.wait(globals())
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_inductor/async_compile.py", line 305, in wait
+    scope[key] = result.result()
+                 ^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_inductor/codecache.py", line 3244, in result
+    self.kernel.precompile()
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 299, in precompile
+    raise e
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 293, in precompile
+    compiled_binary, launcher = self._precompile_config(
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 520, in _precompile_config
+    binary._init_handles()
+  File "/work/tesi_lpaladino/cartridges_venv/lib/python3.12/site-packages/triton/compiler/compiler.py", line 388, in _init_handles
+    raise OutOfResources(self.metadata.shared, max_shared, "shared memory")
+torch._dynamo.exc.BackendCompilerFailed: backend='inductor' raised:
+OutOfResources: out of resource: shared memory, Required: 147456, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+Set TORCH_LOGS="+dynamo" and TORCHDYNAMO_VERBOSE=1 for more information
+
+
+You can suppress this exception and fall back to eager by setting:
+    import torch._dynamo
+    torch._dynamo.config.suppress_errors = True
+

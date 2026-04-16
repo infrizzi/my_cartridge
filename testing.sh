@@ -15,6 +15,7 @@ module unload python/3.11.11-gcc-11.4.0
 module load cuda/12.6.3-none-none
 
 export CARTRIDGES_DIR="/homes/lpaladino/cartridges"
+export CARTRIDGES_OUTPUT_DIR="/work/tesi_lpaladino/outputs"
 export PYTHONPATH="$CARTRIDGES_DIR:$PYTHONPATH"
 
 # Loading environment

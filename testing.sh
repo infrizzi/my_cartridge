@@ -42,7 +42,7 @@ done
 echo "Server pronto! Eseguo testing"
 
 # Esecuzione del test Python
-python test_cartridge.py
+python testing.py
 
 # Pulizia: uccidiamo il server alla fine del test
 echo "Test concluso. Arresto del server (PID: $SERVER_PID)..."

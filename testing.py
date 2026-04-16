@@ -23,10 +23,6 @@ def run_test():
     # Carichiamo il tuo Cartridge specifico
     print(f"--- Caricamento Cartridge: {CHECKPOINT_PATH.split('/')[-1]} ---")
     cache = TrainableCache.from_pretrained(CHECKPOINT_PATH).to("cuda")
-    cache._num_frozen_tokens = 100
-    cache._num_trainable_tokens = 924
-
-    print(f"Configurazione Cache: Frozen={cache._num_frozen_tokens}, Trainable={cache._num_trainable_tokens}")
     
     end_load = time.time()
     print(f"Setup completato in {end_load - start_load:.2f} secondi.\n")

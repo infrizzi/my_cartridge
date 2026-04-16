@@ -26,7 +26,7 @@ if __name__ == "__main__":
         # Inizializzazione della cache apprendibile [cite: 4, 5]
         kv_cache_initializer=KVFromRandomVector.Config(
             max_tokens=1024, 
-            num_frozen_tokens=1 # Come visto nei tuoi log precedenti [cite: 7]
+            num_frozen_tokens=100 # Come visto nei tuoi log precedenti [cite: 7]
         ),
         
         lr=2e-2,

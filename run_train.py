@@ -4,7 +4,7 @@ from datetime import timedelta
 from cartridges.models import HFModelConfig, FlexQwen3ForCausalLM
 from cartridges.train import TrainConfig, GenerationEvalConfig, LossEvalConfig
 from cartridges.datasets import TrainDataset, DataSource, GenerateEvalDataset, LossEvalDataset
-from cartridges.initialization.random import KVFromRandomVector
+from cartridges.initialization.random import KVFromRandomVectors
 import pydrantic
 
 # Percorsi definiti al punto 1
@@ -24,7 +24,7 @@ if __name__ == "__main__":
             model_cls=FlexQwen3ForCausalLM,
         ),
         # Inizializzazione della cache apprendibile [cite: 4, 5]
-        kv_cache_initializer=KVFromRandomVector.Config(
+        kv_cache_initializer=KVFromRandomVectors.Config(
             max_tokens=1024, 
             num_frozen_tokens=100 # Come visto nei tuoi log precedenti [cite: 7]
         ),

@@ -1,0 +1,34 @@
+Unloading python/3.11.11-gcc-11.4.0
+  Unloading useless requirement: util-linux-uuid/2.41-gcc-11.4.0
+    sqlite/3.46.0-gcc-11.4.0 libffi/3.4.8-gcc-11.4.0
+Inizio della fase di Training/Distillazione...
+Utilizzo del dataset generato per Oppenheimer.
+--- Inizio Job: Thu Apr 16 14:32:16 2026 | VRAM Iniziale: 0.00 GB ---
+Running 1 configs
+2026-04-16 14:32:16,891 - cartridges.train [rank=0] - INFO - Global batch size: 32
+2026-04-16 14:32:16,892 - cartridges.train [rank=0] - INFO - Num devices: 1
+2026-04-16 14:32:16,892 - cartridges.train [rank=0] - INFO - Train outputs will be saved to /work/tesi_lpaladino/outputs/checkpoints/2026-04-16-14-32-16-run_train/4551b584-fe03-4a73-81ff-89204d6ce629
+2026-04-16 14:32:20,806 - cartridges.train [rank=0] - INFO - Fininshed loading training dataset from disk, took 2.49s
+2026-04-16 14:32:21,114 - cartridges.train [rank=0] - INFO - Finished loading eval and generate datasets from disk, took 2.8s
+2026-04-16 14:32:30,482 - cartridges.train [rank=0] - INFO - Using custom prefix tuning (TrainableCache)
+2026-04-16 14:32:39,455 - cartridges.cache [rank=0] - INFO - num_trainable_tokens: 924
+2026-04-16 14:32:39,456 - cartridges.cache [rank=0] - INFO - num_frozen_tokens: 100
+2026-04-16 14:32:39,456 - cartridges.train [rank=0] - INFO - Done loading trainable cache, time: 8.97s
+2026-04-16 14:32:39,507 - cartridges.train [rank=0] - INFO - Starting training
+2026-04-16 14:32:47,388 - cartridges.train [rank=0] - INFO - Setup wandb with model stats: {'num_model_params': 4097965568, 'num_trainable_params': 68124672, 'num_trainable_tokens': 924, 'cache_trainable_params': 68124672}
+2026-04-16 14:32:47,505 - cartridges.train [rank=0] - INFO - Dataloader length: 351
+2026-04-16 14:32:47,750 - cartridges.train [rank=0] - INFO - Evaluating `oppenheimer_loss_eval` (n=73, 73 per device, world size=1)
+2026-04-16 14:33:38,816 - cartridges.train [rank=0] - INFO - Eval loss - 2.3474929332733154 
+2026-04-16 14:33:38,846 - cartridges.train [rank=0] - INFO - done evaling - oppenheimer_loss_eval
+2026-04-16 14:38:10,520 - cartridges.train [rank=0] - INFO - Dataloader length: 351
+2026-04-16 14:40:43,106 - cartridges.train [rank=0] - INFO - Dataloader length: 351
+2026-04-16 14:43:15,188 - cartridges.train [rank=0] - INFO - Evaluating `oppenheimer_loss_eval` (n=73, 73 per device, world size=1)
+2026-04-16 14:43:28,228 - cartridges.train [rank=0] - INFO - Eval loss - 0.937191903591156 
+2026-04-16 14:43:28,241 - cartridges.train [rank=0] - INFO - done evaling - oppenheimer_loss_eval
+2026-04-16 14:43:29,031 - cartridges.train [rank=0] - INFO - Saving cache to wandb: cache-step32.pt
+2026-04-16 14:43:29,039 - cartridges.train [rank=0] - INFO - Done training waiting for final barrier.
+
+--- Job Terminato ---
+Tempo totale impiegato: 0:11:12
+VRAM finale occupata: 15.75 GB
+Job di training completato con successo.

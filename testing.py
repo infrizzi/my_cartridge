@@ -32,9 +32,9 @@ def run_test():
     print(f"Setup completato in {end_load - start_load:.2f} secondi.\n")
 
     test_prompts = [
-        "Chi è Lewis Strauss e qual è il suo rapporto con Robert Oppenheimer?",
-        "Spiegami l'importanza del test Trinity descritto nel film.",
-        "Cosa rappresenta la scena finale tra Oppenheimer ed Einstein vicino al laghetto?"
+        "Who was Lewis Strauss and what was his relationship with Robert Oppenheimer?",
+        "Explain the importance of the Trinity test described in the movie.",
+        "What does the final scene between Oppenheimer and Einstein by the lake represent?"
     ]
 
     print("--- INIZIO GENERAZIONE ---")

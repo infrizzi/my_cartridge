@@ -16,11 +16,11 @@ client_config = TokasaurusClient.Config(
 # 2. Configura la risorsa (il tuo file .srt)
 resource_config = TextFileResource.Config(
     path="/work/tesi_lpaladino/documents/Oppenheimer282023%29.srt",
-    seed_prompts=["summarization", "question", "structuring"],
+    seed_prompts=["summarization", "question", "structuring", "use_case", "creative"],
     chunker=TokenChunker.Config(
         tokenizer="Qwen/Qwen3-4b",
         min_tokens_per_chunk=512,
-        max_tokens_per_chunk=1024,
+        max_tokens_per_chunk=2048,
     ),
 )
 
@@ -33,7 +33,7 @@ config = SynthesizeConfig(
     ),
     batch_size=32,
     max_num_batches_in_parallel=4,
-    num_samples=1024, # Numero di conversazioni da generare
+    num_samples=10000, # Numero di conversazioni da generare
     name="cartridge-srt-tutorial",
 )
 

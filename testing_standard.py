@@ -1,9 +1,9 @@
 import torch
 import time
-import os
 from datetime import timedelta
 from transformers import AutoTokenizer
 from cartridges.models import FlexQwen3ForCausalLM
+from cartridges.cache import TrainableCache
 
 # Configurazione percorsi
 MODEL_ID = "Qwen/Qwen3-4b"
@@ -25,6 +25,11 @@ def run_icl_test():
         torch_dtype=torch.bfloat16, 
         device_map="cuda"
     )
+    empty_cache = TrainableCache(
+        init_keys=None,
+        init_values=None,
+        num_frozen_tokens=0
+        ).to("cuda")
     
     # Caricamento del file sottotitoli 
     with open(SUBTITLES_PATH, 'r', encoding='utf-8') as f:
@@ -62,7 +67,7 @@ def run_icl_test():
         position_ids = torch.arange(input_ids.size(1)).unsqueeze(0).to("cuda")
         
         # past_key_values inizia None per il prefill massivo
-        past_key_values = None
+        past_key_values = empty_cache
         max_new_tokens = 256
         
         start_gen = time.time()

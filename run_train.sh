@@ -1,14 +1,14 @@
 #!/bin/bash
 #SBATCH --job-name=trainCart
-#SBATCH --output=logs/train_%j.out
-#SBATCH --error=logs/train_%j.err
+#SBATCH --output=logs/train/train_%j.out
+#SBATCH --error=logs/train/train_%j.err
 #SBATCH --account=tesi_lpaladino
 #SBATCH --partition=all_usr_prod
 #SBATCH --gres=gpu:2
-#SBATCH --ntasks-per-node=2
+#SBATCH --ntasks=1
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=64G
-#SBATCH --time=4:00:00
+#SBATCH --time=24:00:00
 #SBATCH --constraint=gpu_A40_45G|gpu_L40S_45G|gpu_RTX6000_24G|gpu_RTX_A5000_24G
 
 # Modules
@@ -29,7 +29,7 @@ export TORCH_CUDA_ARCH_LIST="8.6;8.9"
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 # Logs dir
-mkdir -p logs
+mkdir -p logs/train
 mkdir -p $CARTRIDGES_OUTPUT_DIR/checkpoints
 
 echo "Inizio della fase di Training/Distillazione..."

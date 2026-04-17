@@ -23,14 +23,14 @@ if __name__ == "__main__":
             pretrained_model_name_or_path="Qwen/Qwen3-4b",
             model_cls=FlexQwen3ForCausalLM,
         ),
-        # Inizializzazione della cache apprendibile [cite: 4, 5]
+        # Inizializzazione della cache apprendibile
         kv_cache_initializer=KVFromRandomVectors.Config(
             max_tokens=1024, 
-            num_frozen_tokens=100 # Come visto nei tuoi log precedenti [cite: 7]
+            num_frozen_tokens=100
         ),
         
-        lr=2e-2,
-        epochs=3,
+        lr=5e-4,
+        epochs=50,
         global_batch_size=32,
 
         dataset=TrainDataset.Config(
@@ -41,7 +41,7 @@ if __name__ == "__main__":
         ),
 
         # --- SEZIONE EVALUATION --- 
-        loss_eval_every_n_steps=50,
+        loss_eval_every_n_steps=100,
         loss_evals=[
             LossEvalConfig(
                 dataset=LossEvalDataset.Config(
@@ -52,13 +52,17 @@ if __name__ == "__main__":
             )
         ],
 
-        save_every_n_steps=200,
+        save_every_n_steps=500,
         name="oppenheimer-distilled-v3",
         output_dir="/work/tesi_lpaladino/outputs/checkpoints",
     )
 
+    print(f"--- VERIFICA CONFIGURAZIONE ---")
+    print(f"Max Tokens: {config.kv_cache_initializer.max_tokens}") 
+    print(f"Frozen Tokens richiesti: {config.kv_cache_initializer.num_frozen_tokens}")
+
     try:
-        # Il wrapper CacheAndModel gestirà il forward con la block_mask [cite: 60, 87]
+        # Il wrapper CacheAndModel gestirà il forward con la block_mask
         pydrantic.main([config])
     finally:
         end_overall = time.time()

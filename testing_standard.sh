@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=inferCart
-#SBATCH --output=logs/test_%j.out
-#SBATCH --error=logs/test_%j.err
+#SBATCH --output=logs/test_standard/test_%j.out
+#SBATCH --error=logs/test_standard/test_%j.err
 #SBATCH --account=tesi_lpaladino
 #SBATCH --partition=all_usr_prod
 #SBATCH --gres=gpu:1
@@ -25,11 +25,11 @@ source /work/tesi_lpaladino/cartridges_venv/bin/activate
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 # Logs dir
-mkdir -p logs
+mkdir -p logs/test_standard
 
 
 echo "Inizio inference..."
 
 # Esecuzione del test Python
-python testing.py
+python testing_standard.py
 echo "Test concluso."

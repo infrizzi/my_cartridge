@@ -10,8 +10,8 @@ from cartridges.initialization.random import KVFromRandomVectors
 import pydrantic
 
 # Percorsi definiti al punto 1
-TRAIN_PATH = "/work/tesi_lpaladino/outputs/processed_data/train_oppenheimer.parquet"
-EVAL_PATH = "/work/tesi_lpaladino/outputs/processed_data/eval_oppenheimer.parquet"
+TRAIN_PATH = "/work/tesi_lpaladino/outputs/processed_data/train_oppenheimer_v4.parquet"
+EVAL_PATH = "/work/tesi_lpaladino/outputs/processed_data/eval_oppenheimer_v4.parquet"
 
 def is_rank0():
     return not dist.is_initialized() or dist.get_rank() == 0

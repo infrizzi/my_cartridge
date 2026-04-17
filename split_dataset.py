@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 # Percorsi
-original_path = "/work/tesi_lpaladino/outputs/2026-04-15-16-30-44-synthesis/cccb0dd8-4041-4c9d-95f7-0b548d1e3f22/artifact/dataset.parquet"
+original_path = "/work/tesi_lpaladino/outputs/2026-04-17-15-04-03-synthesis/a179f11d-d39c-4c0b-b89a-8fdc85f469ee/artifact/dataset.parquet"
 output_dir = "/work/tesi_lpaladino/outputs/processed_data"
 os.makedirs(output_dir, exist_ok=True)
 
@@ -19,11 +19,11 @@ train_df = df_shuffled.iloc[:split_point]
 eval_df = df_shuffled.iloc[split_point:]
 
 # Salvataggio
-train_path = os.path.join(output_dir, "train_oppenheimer.parquet")
-eval_path = os.path.join(output_dir, "eval_oppenheimer.parquet")
+train_path = os.path.join(output_dir, "train_oppenheimer_v4.parquet")
+eval_path = os.path.join(output_dir, "eval_oppenheimer_v4.parquet")
 
 train_df.to_parquet(train_path)
 eval_df.to_parquet(eval_path)
 
-print(f"✅ Split completato (metodo Pandas)!")
+print(f"✅ Split completato!")
 print(f"📂 Train: {len(train_df)} righe | Eval: {len(eval_df)} righe")

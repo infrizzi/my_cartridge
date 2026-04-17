@@ -11,8 +11,8 @@ print("Caricamento dataset...")
 df = pd.read_parquet(original_path)
 df_shuffled = df.sample(frac=1, random_state=42).reset_index(drop=True)
 
-# Calcolo del punto di split (90%)
-split_point = int(len(df_shuffled) * 0.9)
+# Calcolo del punto di split (95%)
+split_point = int(len(df_shuffled) * 0.95)
 
 # Divisione
 train_df = df_shuffled.iloc[:split_point]

@@ -43,8 +43,8 @@ if __name__ == "__main__":
         ),
         
         lr=1e-2,
-        epochs=200,
-        global_batch_size=64,
+        epochs=100,
+        global_batch_size=32,
 
         dataset=TrainDataset.Config(
             data_sources=[DataSource(path=TRAIN_PATH, type="local")],

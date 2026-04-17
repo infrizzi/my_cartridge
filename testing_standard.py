@@ -3,7 +3,7 @@ import time
 from datetime import timedelta
 from transformers import AutoTokenizer
 from cartridges.models import FlexQwen3ForCausalLM
-from cartridges.cache import TrainableCache
+from cartridges.cache import AttnConfig, TrainableCache
 
 # Configurazione percorsi
 MODEL_ID = "Qwen/Qwen3-4b"
@@ -25,7 +25,15 @@ def run_icl_test():
         torch_dtype=torch.bfloat16, 
         device_map="cuda"
     )
+
+    qwen_attn_config = AttnConfig(
+        n_layers=37,    # 
+        n_heads=8,      # 
+        head_dim=128    # 
+    )
+
     empty_cache = TrainableCache(
+        config=qwen_attn_config,
         init_keys=None,
         init_values=None,
         num_frozen_tokens=0

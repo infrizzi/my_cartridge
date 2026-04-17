@@ -39,12 +39,12 @@ if __name__ == "__main__":
         # Inizializzazione della cache apprendibile
         kv_cache_initializer=KVFromRandomVectors.Config(
             max_tokens=1024, 
-            num_frozen_tokens=100
+            num_frozen_tokens=24
         ),
         
         lr=1e-2,
         epochs=200,
-        global_batch_size=128,
+        global_batch_size=64,
 
         dataset=TrainDataset.Config(
             data_sources=[DataSource(path=TRAIN_PATH, type="local")],

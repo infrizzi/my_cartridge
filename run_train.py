@@ -42,9 +42,9 @@ if __name__ == "__main__":
             num_frozen_tokens=100
         ),
         
-        lr=5e-4,
-        epochs=50,
-        global_batch_size=32,
+        lr=1e-2,
+        epochs=200,
+        global_batch_size=128,
 
         dataset=TrainDataset.Config(
             data_sources=[DataSource(path=TRAIN_PATH, type="local")],
@@ -66,7 +66,7 @@ if __name__ == "__main__":
         ],
 
         save_every_n_steps=500,
-        name="oppenheimer-distilled-v3",
+        name="oppenheimer-distilled-v4",
         output_dir="/work/tesi_lpaladino/outputs/checkpoints",
     )
 

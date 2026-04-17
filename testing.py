@@ -29,8 +29,8 @@ def run_test():
     # Carichiamo il tuo Cartridge specifico
     print(f"--- Caricamento Cartridge: {CHECKPOINT_PATH.split('/')[-1]} ---")
     cache = TrainableCache.from_pretrained(CHECKPOINT_PATH).to("cuda")
-    cache._num_frozen_tokens=100
-    cache._num_trainable_tokens=924
+    n_frozen = cache._num_frozen_tokens
+    assert n_frozen == 100, f"Errore: trovati {n_frozen} token frozen invece di 100"
 
 
     end_load = time.time()
@@ -57,7 +57,7 @@ def run_test():
         position_ids = torch.arange(len(input_ids)).to("cuda")
 
         max_new_tokens = 256
-        temperature = 0.5
+        temperature = 0.7
         rep_penalty = 1.1
         
         start_gen = time.time()

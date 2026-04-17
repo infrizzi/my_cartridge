@@ -4,10 +4,10 @@
 #SBATCH --error=logs/train/train_%j.err
 #SBATCH --account=tesi_lpaladino
 #SBATCH --partition=all_usr_prod
-#SBATCH --gres=gpu:2
-#SBATCH --ntasks=1
+#SBATCH --gres=gpu:4
+#SBATCH --ntasks-per-node=4
 #SBATCH --cpus-per-task=16
-#SBATCH --mem=64G
+#SBATCH --mem=128G
 #SBATCH --time=10:00:00
 #SBATCH --constraint=gpu_A40_45G|gpu_L40S_45G|gpu_RTX6000_24G|gpu_RTX_A5000_24G
 
@@ -36,6 +36,6 @@ echo "Inizio della fase di Training/Distillazione..."
 echo "Utilizzo del dataset generato per Oppenheimer."
 
 # Esecuzione dello script di training
-torchrun --nproc_per_node=2 run_train.py
+torchrun --nproc_per_node=4 run_train.py
 
 echo "Job di training completato con successo."

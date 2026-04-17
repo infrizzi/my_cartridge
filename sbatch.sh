@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH --job-name=selfstudyCart
-#SBATCH --output=logs/selfstudy_%j.out
-#SBATCH --error=logs/selfstudy_%j.err
+#SBATCH --output=logs/dataset/selfstudy_%j.out
+#SBATCH --error=logs/dataset/selfstudy_%j.err
 #SBATCH --account=tesi_lpaladino
 #SBATCH --partition=boost_usr_prod
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=40G
-#SBATCH --time=5:00:00
+#SBATCH --time=8:00:00
 #SBATCH --constraint=gpu_A40_45G|gpu_L40S_45G
 
 # Modules
@@ -29,7 +29,7 @@ export TORCH_CUDA_ARCH_LIST="8.6;8.9"
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 # Logs dir
-mkdir -p logs
+mkdir -p logs/dataset
 mkdir -p $CARTRIDGES_OUTPUT_DIR
 
 # Monitoring VRAM

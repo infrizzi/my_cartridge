@@ -43,7 +43,7 @@ if __name__ == "__main__":
         ),
         
         lr=1e-2,
-        epochs=100,
+        epochs=200,
         global_batch_size=128,
 
         dataset=TrainDataset.Config(
@@ -65,7 +65,7 @@ if __name__ == "__main__":
             )
         ],
 
-        save_every_n_steps=500,
+        save_every_n_steps=50,
         name="oppenheimer-distilled-v4",
         output_dir="/work/tesi_lpaladino/outputs/checkpoints",
     )

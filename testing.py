@@ -7,7 +7,7 @@ from cartridges.cache import TrainableCache
 
 # Configurazione percorsi
 MODEL_ID = "Qwen/Qwen3-4b"
-CHECKPOINT_PATH = "/work/tesi_lpaladino/outputs/checkpoints/2026-04-16-14-32-16-run_train/4551b584-fe03-4a73-81ff-89204d6ce629/cache-step32.pt"
+CHECKPOINT_PATH = "/work/tesi_lpaladino/outputs/checkpoints/2026-04-17-10-55-15-run_train/bc24dcb7-25fa-4aba-a9e7-c638bfeb5d77/cache-step550.pt"
 
 def run_test():
     print(f"--- Caricamento Modello e Tokenizer ({MODEL_ID}) ---")
@@ -51,10 +51,6 @@ def run_test():
         start_gen = time.time()
         with torch.no_grad():
             for i in range(max_new_tokens):
-                # CHIAMATA CORRETTA:
-                # 1. Usiamo i nomi dei parametri della classe (past_key_values invece di cache)
-                # 2. Passiamo seq_ids e position_ids che sono obbligatori
-                # 3. Impostiamo mode="generate" come previsto dalla classe Qwen3Batch
                 outputs = model(
                     input_ids=input_ids,
                     seq_ids=seq_ids,
@@ -65,7 +61,10 @@ def run_test():
                 
                 # Prendiamo i logits dell'ULTIMO token
                 next_token_logits = outputs.logits[:, -1, :]
-                next_token = torch.argmax(next_token_logits, dim=-1).unsqueeze(-1)
+                
+                # Campionamento probabilistico
+                probs = torch.softmax(next_token_logits / 0.7, dim=-1) # Temperature 0.7
+                next_token = torch.multinomial(probs, num_samples=1)
                 
                 # Aggiorniamo la sequenza totale per la decodifica finale
                 generated_ids = torch.cat([generated_ids, next_token], dim=-1)

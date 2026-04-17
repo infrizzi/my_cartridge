@@ -7,7 +7,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=40G
-#SBATCH --time=2:00:00
+#SBATCH --time=5:00:00
 #SBATCH --constraint=gpu_A40_45G|gpu_L40S_45G
 
 # Modules
